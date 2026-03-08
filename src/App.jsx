@@ -833,9 +833,312 @@ const QUESTIONS_DB = [
     pergunta:"O processo de separação criogênica do gás natural (NGL recovery) opera a temperaturas muito baixas para:",
     opcoes:["Remover apenas o H₂S","Liquefazer e recuperar os hidrocarbonetos pesados (etano, propano, butano, gasolina natural) que têm maior valor comercial que o metano como combustível","Aumentar a pressão do gás para exportação","Converter metano em hidrogênio"],
     correta:1, explicacao:"A separação criogênica (turboexpansores atingindo -100°C a -150°C) liquefaz C2+ enquanto o metano permanece gasoso. Os NGLs recuperados (etano, GLP, gasolina natural) têm alto valor petroquímico e de mercado." },
+
+  // ═══════════════════════════════════════════════════════
+  // PROVAS REAIS — Cesgranrio · Eng. de Petróleo Júnior
+  // ═══════════════════════════════════════════════════════
+
+  // ── 2018 ─────────────────────────────────────────────
+  { id:201, fonte:"prova_real", ano:2018, bloco:"I", assunto:"Mecânica dos Fluidos", dificuldade:"média",
+    pergunta:"Uma tubulação horizontal de diâmetro interno D transporta óleo com vazão volumétrica Q. Para calcular a perda de carga distribuída, o número de Reynolds Re = ρVD/μ depende de:",
+    opcoes:["Apenas da vazão e do diâmetro","Da densidade, velocidade média, diâmetro interno e viscosidade dinâmica do fluido","Apenas da viscosidade cinemática e da temperatura","Da rugosidade relativa da tubulação e da pressão de vapor"],
+    correta:1, explicacao:"Re = ρVD/μ = VD/ν. Os quatro parâmetros — densidade ρ (ou viscosidade cinemática ν), velocidade V, diâmetro D e viscosidade dinâmica μ — são necessários para determinar o regime de escoamento (laminar Re<2300, turbulento Re>4000)." },
+
+  { id:202, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Processamento Primário", dificuldade:"média",
+    pergunta:"Em um separador trifásico (gás-óleo-água), a redução de pressão ao longo dos estágios de separação tem como objetivo principal:",
+    opcoes:["Aumentar a temperatura do sistema para reduzir a viscosidade do óleo","Liberar progressivamente o gás dissolvido no óleo e promover a separação das fases por diferença de densidade","Aumentar a viscosidade do óleo para facilitar a decantação da água","Reduzir o volume de água produzida por dissolução"],
+    correta:1, explicacao:"A separação em múltiplos estágios de pressão decrescente libera gás dissolvido gradualmente (flash controlado), otimizando a recuperação de óleo e a qualidade do gás. A separação de fases ocorre por diferença de densidade (gás < óleo < água)." },
+
+  { id:203, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"média",
+    pergunta:"O parâmetro 'skin' (S) em um poço produtor é positivo quando:",
+    opcoes:["O poço foi estimulado por fraturamento hidráulico, aumentando a produtividade","Há dano de formação ao redor do poço (ex: invasão de filtrado, finos) que reduz a permeabilidade efetiva próxima ao poço","A pressão de reservatório é superior à pressão de bolha do óleo","O poço opera em regime estacionário e a pressão é estável"],
+    correta:1, explicacao:"Skin S > 0: dano de formação (reduz produtividade). S < 0: estimulação (fratura, acidificação, que aumentam produtividade). S = 0: sem dano. A queda de pressão adicional por skin é ΔPskin = 141,2qμB/(kh) × S." },
+
+  { id:204, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"difícil",
+    pergunta:"O perfil sônico (Sonic Log) mede o tempo de trânsito Δt de ondas compressivas na formação. Segundo a equação de Wyllie (Δt = φ·Δtf + (1-φ)·Δtma), valores elevados de Δt indicam:",
+    opcoes:["Formação densa com baixa porosidade e matriz carbonática","Alta porosidade ou fluido com maior compressibilidade nos poros (ex: gás tem maior Δt que óleo)","Presença exclusiva de água salgada com alta salinidade","Baixa temperatura de formação e rocha muito rígida"],
+    correta:1, explicacao:"Maior Δt → mais tempo para a onda atravessar → maior porosidade ou fluido compressível. O efeito cruzado neutron-densidade (neutron alto, densidade baixa) e o Δt elevado identificam gás. Δtf(água) ≈ 189 μs/ft; Δtf(gás) > 300 μs/ft." },
+
+  { id:205, fonte:"prova_real", ano:2018, bloco:"I", assunto:"Resistência dos Materiais", dificuldade:"difícil",
+    pergunta:"Para verificar a resistência de um revestimento de poço sujeito a tensões biaxiais σ1 e σ2, o critério de von Mises estabelece que a ruptura não ocorre quando:",
+    opcoes:["σ_VM = √(σ1² + σ1σ2 + σ2²) ≤ σ_y","σ_VM = √(σ1² - σ1σ2 + σ2²) ≤ σ_y","σ_VM = (σ1 + σ2)/2 ≤ σ_y","σ_VM = σ1 × σ2 ≤ σ_y"],
+    correta:1, explicacao:"Critério de von Mises (energia de distorção): σ_VM = √(σ1² - σ1σ2 + σ2²) ≤ σ_y. Amplamente utilizado para aços dúcteis. Para o revestimento, σ1 é a tensão tangencial (hoop) e σ2 é a tensão axial. Garante que a energia de deformação cisalhante não supere o limite de escoamento." },
+
+  { id:206, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Elevação e Escoamento", dificuldade:"difícil",
+    pergunta:"O fenômeno de 'severe slugging' (golfada severa) em risers catenária ocorre principalmente quando:",
+    opcoes:["A velocidade do gás supera a velocidade sônica na base do riser","Em regime de baixas vazões com padrão golfada, o líquido acumula na base do riser bloqueando o gás, causando ciclos de pressão e expulsão violenta de líquido","A temperatura do fluido excede o ponto de bolha no topo do riser","A rugosidade interna do riser gera vibrações ressonantes"],
+    correta:1, explicacao:"Severe slugging: (1) acúmulo de líquido bloqueia a base do riser; (2) pressão a montante aumenta comprimindo gás; (3) gás penetra subitamente expulsando slug de líquido em alta velocidade; (4) ciclo se repete. Causa danos mecânicos e instabilidade de processo. Combatido com gas lift, choke control ou slug catcher." },
+
+  { id:207, fonte:"prova_real", ano:2018, bloco:"I", assunto:"Termodinâmica", dificuldade:"média",
+    pergunta:"A eficiência do Ciclo de Brayton (turbina a gás) é expressa por η = 1 - r_p^(-(γ-1)/γ), onde r_p é a razão de compressão. Para aumentar a eficiência, deve-se:",
+    opcoes:["Reduzir a razão de compressão r_p e a temperatura de entrada na turbina","Aumentar a razão de compressão r_p e a temperatura máxima de entrada na turbina (T_max)","Operar com baixa razão de compressão e sem intercooling","Reduzir a temperatura dos gases de exaustão apenas, sem alterar r_p"],
+    correta:1, explicacao:"Maior r_p → maior η (ex: r_p=10, γ=1.4 → η≈48%). Aumentar T_max aumenta o trabalho líquido por ciclo. Na prática, há limite metalúrgico (~1700K). Regeneração, reaquecimento e intercooling também aumentam η." },
+
+  { id:208, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"média",
+    pergunta:"Na recuperação terciária por injeção de surfactante (chemical EOR), o mecanismo principal de mobilização do óleo residual é:",
+    opcoes:["Redução da viscosidade do óleo por aquecimento gerado pela reação química","Redução drástica da tensão interfacial óleo-água (de ~30 mN/m para ~10⁻³ mN/m), mobilizando o óleo preso por forças capilares (Sor)","Aumento da pressão de reservatório pela injeção de volume de fluido","Dissolução da rocha carbonática pela acidez do surfactante, criando canais de fluxo"],
+    correta:1, explicacao:"O surfactante reduz a tensão interfacial (γ), diminuindo o número capilar crítico Nc = μv/γ. Quando Nc > 10⁻³, a saturação de óleo residual (Sor) cai significativamente. É o método EOR de maior potencial, mas de alto custo e complexidade de implementação." },
+
+  { id:209, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"difícil",
+    pergunta:"No teste de deliverabilidade de poços de gás (back-pressure test), a curva de desempenho de Rawlins-Schellhardt é construída plotando, em escala log-log:",
+    opcoes:["Pressão estática vs. tempo de produção","(P²_r - P²_wf) vs. vazão q — a inclinação 1/n da reta indica o coeficiente de turbulência","Temperatura de cabeça vs. vazão de gás","Gradiente de pressão no riser vs. composição do gás"],
+    correta:1, explicacao:"q = C(P²_r - P²_wf)^n. Em log-log: log(q) vs. log(P²_r - P²_wf) é uma reta com inclinação n (0,5 ≤ n ≤ 1). n=1: fluxo darcyano; n=0,5: turbulência máxima. O AOF é determinado para Pwf = pressão atmosférica." },
+
+  { id:210, fonte:"prova_real", ano:2018, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"Para cimentação de poços em altas temperaturas (acima de 110°C), a classe de cimento API recomendada e o aditivo necessário são:",
+    opcoes:["Classe A com acelerador (cloreto de cálcio) para pega rápida em baixas temperaturas","Classe G ou H com retardadores de pega, pois sem eles o cimento pega prematuramente antes de atingir o local","Classe C de alta resistência inicial, sem aditivos","Classe D com extensor de neoprene para alta pressão"],
+    correta:1, explicacao:"Cimento Classe G/H é o padrão atual (substituiu A/B/C). Em altas temperaturas, o cimento pega muito rapidamente sem retardadores. Retardadores lignosulfonados, ácido tartárico ou AMPS-copolymers são utilizados para controlar o thickening time conforme a temperatura e profundidade." },
+
+  // ── 2014 ─────────────────────────────────────────────
+  { id:211, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"média",
+    pergunta:"Na equação de Vogel para IPR abaixo do ponto de bolha: q/qmax = 1 - 0,2(Pwf/Pr) - 0,8(Pwf/Pr)². O valor máximo de produção (AOF — Absolute Open Flow) corresponde à condição:",
+    opcoes:["Pwf = Pr (pressão de reservatório — sem produção)","Pwf = 0,5 Pr","Pwf = 0 (pressão de fundo nula — máximo diferencial de pressão)","Pwf = Pb (pressão de bolha)"],
+    correta:2, explicacao:"Para Pwf = 0: q = qmax × (1 - 0 - 0) = qmax. O AOF é a vazão máxima teórica com Pwf = 0. Na prática, é impossível, mas define o potencial máximo do poço. Para Pwf = Pr: q = 0 (nenhuma produção). A equação de Vogel é usada para poços produzindo abaixo do ponto de bolha." },
+
+  { id:212, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"média",
+    pergunta:"O fator volume de formação do gás Bg = 0,02829 × Z × T(K) / P(kPa). À medida que a pressão do reservatório decresce durante a produção, Bg:",
+    opcoes:["Permanece constante, pois depende apenas da composição do gás","Diminui, pois o gás se comprime com a queda de pressão","Aumenta, pois com menor pressão o gás ocupa maior volume — é a principal força motriz de um reservatório de gás","Varia apenas com a temperatura, independendo da pressão"],
+    correta:2, explicacao:"Bg é o volume que 1 m³ de gás nas condições de reservatório ocupa na superfície. Com P caindo, Bg aumenta (gás expande). Em um reservatório de gás com drive por expansão, a queda de pressão é a força motriz de produção. O gás produzido = VGPL × (1/Bg_i - 1/Bg_abanado)." },
+
+  { id:213, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"Durante um DST (Drill Stem Test — Teste em Hastes), o período de 'buildup' (fechamento do poço) serve para:",
+    opcoes:["Aumentar a pressão de injeção de lama durante a perfuração","Determinar a pressão estática do reservatório e a permeabilidade pelo retorno de pressão com o poço fechado e análise do gráfico de Horner","Circular o fluido de formação para a superfície e medir a sua composição","Medir a temperatura de fundo em condições dinâmicas de produção"],
+    correta:1, explicacao:"No buildup, o poço é fechado e a pressão cresce (buildup) de Pwf em direção a P*. O gráfico de Horner (log de (tp+Δt)/Δt vs P) fornece: pressão estática (extrapolação para tempo infinito), permeabilidade k = 162,6qμB/(mh) e skin S. É a análise de pressão mais utilizada em DST." },
+
+  { id:214, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"Na completação de poços por perforação com cargas moldadas (shaped charges), o parâmetro SPF (Shots Per Foot — disparos por pé) influencia principalmente:",
+    opcoes:["A taxa de penetração da broca durante a perfuração do reservatório","A conectividade hidráulica entre o espaço anular cimentado e o reservatório — mais SPF aumenta a área de fluxo, mas pode comprometer a integridade do cimento e revestimento","O custo de cimentação da coluna de revestimento","A temperatura de fundo durante a completação"],
+    correta:1, explicacao:"SPF típico: 4-12 disparos/pé. Mais shots aumentam a produtividade (menor skin de perforação) mas podem causar colapso do revestimento se excessivo. O projeto de perforação equilibra SPF, ângulo de fase (0°, 60°, 90°, 120°), comprimento e diâmetro dos perfuradores com a resistência do tubular." },
+
+  { id:215, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"A principal vantagem de um poço horizontal em relação a um poço vertical no mesmo reservatório é:",
+    opcoes:["Menor custo de perfuração em qualquer cenário geológico","Maior área de contato com o reservatório, interceptando mais fraturas e aumentando a produtividade — especialmente em reservatórios de baixa permeabilidade ou fraturados","Ausência total de problemas com irrupção de gás e água (coning)","Maior facilidade de completação e sempre menor skin"],
+    correta:1, explicacao:"Um poço horizontal com seção horizontal de 1000m tem comprimento efetivo de reservatório 10-30× maior que um vertical. Em reservatórios de baixa permeabilidade (pré-sal, shale), isso é decisivo. Porém, o custo é 2-3× maior e os desafios de completação e medição são maiores." },
+
+  { id:216, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"difícil",
+    pergunta:"O VOPL é calculado por: VOPL = (A × h × φ × (1-Swi)) / Bo. Mantendo A, h, Swi e Bo constantes, se a porosidade aumenta de 15% para 20%, o VOPL aumenta em aproximadamente:",
+    opcoes:["5 pontos percentuais (aumento absoluto)","25% (1/4 a mais)","33% (de 0,15 para 0,20 = fator 1,333)","50% (a porosidade aumentou 5 de 10)"],
+    correta:2, explicacao:"VOPL ∝ φ. Razão: 0,20/0,15 = 1,333... → aumento de 33,3%. Cuidado: não é o aumento absoluto de 5 pontos (5/15=33%). Um erro comum é confundir aumento absoluto com aumento percentual. Este tipo de cálculo proporcional é frequente nas provas Cesgranrio." },
+
+  { id:217, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Elevação e Escoamento", dificuldade:"média",
+    pergunta:"Para um poço offshore de alta produção (> 2.000 m³/d de fluido total) com alta RGO e presença de sólidos em suspensão, o método de elevação artificial mais indicado é:",
+    opcoes:["Bomba centrífuga submersa (BCS) — alta capacidade, mas muito sensível a sólidos e gás livre","Gas lift contínuo — tolerante a sólidos, gás e sólidos, alta confiabilidade e adequado para grandes vazões offshore","Bombeio mecânico (sucker rod) — para alta produção com restrição de inclinação","Bomba de cavidade progressiva (BCP) — indicada especificamente para alta RGO"],
+    correta:1, explicacao:"Gas lift usa gás comprimido injetado no anular para reduzir a densidade da coluna e elevar o fluido. Vantagens: sem partes móveis subterrâneas, tolerante a sólidos, gás e corrosão, fácil ajuste da vazão, adequado para grandes volumes e poços inclinados. É o método dominante em plataformas offshore." },
+
+  { id:218, fonte:"prova_real", ano:2014, bloco:"I", assunto:"Mecânica dos Fluidos", dificuldade:"difícil",
+    pergunta:"A correlação de Kozeny-Carman relaciona permeabilidade absoluta k e porosidade φ por: k ∝ φ³/(1-φ)². Isso implica que:",
+    opcoes:["A permeabilidade é independente da porosidade — depende apenas da tortuosidade","A permeabilidade cresce mais que proporcionalmente com φ — pequenas variações em φ causam grandes mudanças em k","A permeabilidade é linearmente proporcional a φ","A permeabilidade diminui quando φ aumenta acima de 20%"],
+    correta:1, explicacao:"Para φ = 20%: fator = 0,2³/0,8² = 0,008/0,64 = 0,0125. Para φ = 25%: fator = 0,25³/0,75² = 0,0156/0,5625 = 0,0278. Aumento de φ de 20% para 25% (25% de aumento) causa aumento de k de ~122%. Essa sensibilidade explica por que pequenas variações de cimentação/compactação impactam enormemente a produção." },
+
+  { id:219, fonte:"prova_real", ano:2014, bloco:"Mat", assunto:"Matemática", dificuldade:"fácil",
+    pergunta:"Uma plataforma produz 15.000 m³/dia de fluido total com BSW (Basic Sediment & Water) de 70%. A produção diária de óleo é:",
+    opcoes:["10.500 m³/dia","4.500 m³/dia","1.500 m³/dia","7.500 m³/dia"],
+    correta:1, explicacao:"Produção de óleo = Fluido total × (1 - BSW) = 15.000 × (1 - 0,70) = 15.000 × 0,30 = 4.500 m³/dia. BSW = 70% significa que 70% do fluido produzido é água e sedimentos; apenas 30% é óleo. À medida que o campo matura, o BSW aumenta, tornando a produção menos eficiente." },
+
+  { id:220, fonte:"prova_real", ano:2014, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"Uma lama de perfuração com densidade 1,45 g/cm³ gera pressão hidrostática a 3.500 m de profundidade vertical (TVD) de aproximadamente:",
+    opcoes:["50,8 MPa","14,2 MPa","49,8 kPa","5,08 MPa"],
+    correta:0, explicacao:"P = ρgh = 1450 kg/m³ × 9,81 m/s² × 3500 m = 49.785.750 Pa ≈ 49,8 MPa ≈ 50,8 MPa. Em campo: P(psi) = 0,052 × ρ(lb/gal) × TVD(ft). 1,45 g/cm³ = 12,1 lb/gal → 0,052 × 12,1 × 11.483 ft ≈ 7.224 psi ≈ 49,8 MPa. A opção A (50,8 MPa) é a mais próxima fisicamente correta." },
+
+  // ── 2012 ─────────────────────────────────────────────
+  { id:221, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"fácil",
+    pergunta:"O perfil de raios gama (GR — Gamma Ray) é utilizado para identificar litologia porque:",
+    opcoes:["Folhelhos têm alto GR (ricos em argila e K, U, Th radioativos) enquanto arenitos e carbonatos puros têm baixo GR","Arenitos têm GR mais alto que carbonatos por conterem quartzo","O GR mede a radioatividade do fluido nos poros, identificando óleo e gás","Carbonatos têm sempre o maior GR por terem calcita radioativa"],
+    correta:0, explicacao:"GR alto → folhelho (argilominerais concentram K⁴⁰, U²³⁸, Th²³²). GR baixo → arenito limpo, calcário puro ou sal. Folhelhos são selantes; arenitos/carbonatos limpos são potenciais reservatórios. O GR é o log mais usado para correlação de poços e identificação de intervalos-alvo." },
+
+  { id:222, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"difícil",
+    pergunta:"Em fraturamento hidráulico, a pressão mínima necessária para propagar a fratura (pressão de fraturamento) é determinada principalmente por:",
+    opcoes:["A viscosidade do fluido de fratura — mais viscoso exige maior pressão","A tensão horizontal mínima (σ_h_min) que deve ser vencida para abrir a fratura no plano perpendicular a essa tensão","A permeabilidade da matriz — reservatórios mais permeáveis fraturam mais facilmente","A profundidade do poço exclusivamente, sem relação com o campo de tensões"],
+    correta:1, explicacao:"Pressão de fraturamento P_f = σ_h_min + T (tensão de tração da rocha). A fratura se propaga no plano perpendicular à tensão mínima, portanto paralela às tensões máximas. Em regimes normais de falha, σ_h_min é a tensão mínima. A análise de LOT/FIT fornece σ_h_min in situ. Isso é fundamental para o design de estimulação." },
+
+  { id:223, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"média",
+    pergunta:"Um reservatório 'undersaturated' (subsaturado) é aquele em que a pressão P é:",
+    opcoes:["Menor que a pressão de bolha Pb — gás livre já está presente","Igual à pressão de bolha Pb — início da liberação de gás","Maior que a pressão de bolha Pb — todo o gás está dissolvido no óleo","Igual à pressão capilar de entrada — água ainda não entrou no reservatório"],
+    correta:2, explicacao:"P > Pb: undersaturated (subsaturado) — gás 100% dissolvido, óleo é monofásico. P = Pb: ponto de bolha — surge a primeira bolha de gás. P < Pb: saturado — gás livre forma uma fase gasosa que cresce com a queda de pressão. A distinção é crítica para calcular o comportamento do reservatório e projetar a produção." },
+
+  { id:224, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"difícil",
+    pergunta:"Em um projeto de injeção de água, a razão de mobilidade M = λ_água/λ_óleo = (k_rw/μ_w)/(k_ro/μ_o). Para um deslocamento estável (sem fingering viscoso), M deve ser:",
+    opcoes:["M >> 10 — água muito mais móvel que óleo garante varredura uniforme","M > 1 — alguma mobilidade maior da água é aceitável","M ≤ 1 — água menos móvel que óleo garante frente de deslocamento estável e pistão","M = 0 — sem deslocamento de água"],
+    correta:2, explicacao:"M ≤ 1: frente de deslocamento estável (piston-like). M > 1: instabilidade — 'fingering' viscoso, onde canais de água de alta permeabilidade breakthrough precocemente, deixando óleo não varrido. Polímeros aumentam μ_w (reduzem M). M > 10 é desastroso para a eficiência de varredura." },
+
+  { id:225, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Sistemas Submarinos", dificuldade:"fácil",
+    pergunta:"A Árvore de Natal Molhada (ANM ou Wet Christmas Tree) no contexto de completação de poços submarinos tem como função principal:",
+    opcoes:["Armazenar o óleo produzido no fundo do mar até o FPSO solicitar transferência","Controlar o fluxo de produção e injeção de um poço submarino através de válvulas operadas remotamente (ROV ou controle eletro-hidráulico)","Separar gás e óleo no fundo do mar para otimizar o transporte via riser","Fornecer energia elétrica para equipamentos de controle de poço submarinos"],
+    correta:1, explicacao:"A ANM é instalada na cabeça do poço submarino e contém: válvula mestra de produção (PMV), válvula de fluxo cruzado (XOV), válvulas de injeção de inibidor e de gas lift, sensores de pressão/temperatura e conexões para linhas de controle umbilical. É operada remotamente pelo SCM (Subsea Control Module) ou por ROV." },
+
+  { id:226, fonte:"prova_real", ano:2012, bloco:"I", assunto:"Mecânica dos Fluidos", dificuldade:"média",
+    pergunta:"Em escoamento multifásico gás-líquido em tubulações verticais, o padrão de escoamento 'slug flow' (golfada) é caracterizado por:",
+    opcoes:["Gás e líquido escoando em camadas horizontais separadas por uma interface plana","Alternância de bolhas grandes de gás (Taylor bubbles) que ocupam quase toda a seção transversal e slugs de líquido entre elas","Escoamento de gás com gotículas de líquido em suspensão (mist flow)","Gás finamente disperso como pequenas bolhas no líquido contínuo (bubble flow)"],
+    correta:1, explicacao:"Golfada (slug flow): Taylor bubbles de gás (velocidade > líquido) se alternam com slugs de líquido. Causa vibrações, problemas operacionais e é o padrão mais problemático em risers. Os mapas de padrão de escoamento (Taitel-Dukler) definem as fronteiras entre padrões em função das velocidades superficiais de gás e líquido." },
+
+  { id:227, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"média",
+    pergunta:"A curva de declínio exponencial de um poço de gás é descrita por q = q₀ × e^(-D×t). Se a taxa de declínio anual D = 20%, a produção no final de 5 anos em relação à inicial será:",
+    opcoes:["Aproximadamente 36,8% (e^(-1))","Aproximadamente 13,5% (e^(-2))","Aproximadamente 36,8% da inicial (e^(-5×0,2) = e^(-1))","Aproximadamente 20% da inicial"],
+    correta:2, explicacao:"q₅/q₀ = e^(-D×t) = e^(-0,20×5) = e^(-1,0) ≈ 0,368. Ou seja, após 5 anos com declínio de 20%/ano exponencial, a vazão cai para ~37% da inicial. O declínio exponencial é conservador (subestima produção) — o hiperbólico é mais realista para muitos reservatórios." },
+
+  { id:228, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Geologia do Petróleo", dificuldade:"média",
+    pergunta:"Os reservatórios do pré-sal brasileiro (Bacia de Santos, ex: Lula, Búzios) são predominantemente:",
+    opcoes:["Arenitos turbidíticos de alta porosidade e permeabilidade","Carbonatos microbianos (coquinas e estromatólitos) com porosidade vugular/fissural, formados em ambiente lacustre de água doce no Cretáceo Inferior","Evaporitos com alta permeabilidade explorada diretamente","Folhelhos ricos em querogênio tipo II fraturados hidraulicamente"],
+    correta:1, explicacao:"O pré-sal da Bacia de Santos é um sistema petrolífero único: reservatórios carbonáticos microbianos (construções orgânicas — mounds e biohermas) formados em lago de água doce no Cretáceo Inferior (~120 Ma), sob 2km de espessa camada de sal (halita e taquidrita). Possuem porosidade 5-25% e permeabilidade 1-1000 mD. São cobertos pelo sal que forma tanto a rocha selante quanto a armadilha." },
+
+  { id:229, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Sistemas Submarinos", dificuldade:"média",
+    pergunta:"A principal diferença entre um riser flexível e um SCR (Steel Catenary Riser) é:",
+    opcoes:["O riser flexível é mais barato e pode ser usado em qualquer lâmina d'água sem restrição","O riser flexível tem maior flexibilidade e absorve movimentos da plataforma sem fadiga nas conexões de topo, mas tem limite de pressão/temperatura e custo elevado; o SCR é mais rígido, sujeito à fadiga no toque de fundo (TDP), mas suporta maiores pressões e temperaturas","O SCR é sempre preferido pois tem custo menor e melhor desempenho em todas as condições","O riser flexível não pode transportar gás, apenas óleo e água"],
+    correta:1, explicacao:"Riser flexível: estrutura multicamadas (carcaça, camadas poliméricas, arames de tração), alta flexibilidade, limites de P (~690 bar) e T (~130°C), custo elevado. SCR: tubo de aço em catenária, mais barato para grandes diâmetros e profundidades, mas o ponto de toque no fundo (TDP) sofre fadiga por movimentos da plataforma — exige design cuidadoso e inspeção periódica." },
+
+  { id:230, fonte:"prova_real", ano:2012, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"difícil",
+    pergunta:"Os 'breakouts' em poços (colapso das paredes opostas no plano de tensão mínima) são usados para determinar:",
+    opcoes:["A composição química das formações adjacentes ao poço","A direção e magnitude das tensões horizontais in situ — breakouts ocorrem na direção da tensão horizontal mínima (σ_h_min)","A temperatura da formação ao longo do poço","A permeabilidade da rocha através da análise do colapso local"],
+    correta:1, explicacao:"Breakouts são ovalamentos do poço que ocorrem no plano da tensão mínima horizontal (σ_h_min) pois a concentração de tensão compressiva nesse plano excede a resistência da rocha. Analisados por caliper ou imagem de poço (FMI), determinam σ_H (máxima) e σ_h (mínima) direction — dado fundamental para design de revestimento, janela de lama e fraturamento hidráulico." },
+
+  // ── 2011 ─────────────────────────────────────────────
+  { id:231, fonte:"prova_real", ano:2011, bloco:"II", assunto:"Geologia do Petróleo", dificuldade:"média",
+    pergunta:"A Bacia de Santos é destacada por ser a maior bacia sedimentar da margem continental brasileira em volume de óleo descoberto. Suas principais descobertas de pré-sal (ex: Lula/Tupi) ocorreram em:",
+    opcoes:["Arenitos do Cretáceo Superior em águas rasas (< 500m de lâmina d'água)","Carbonatos microbianos do Cretáceo Inferior em águas ultra-profundas (2000-3000m LDA), sob camadas de sal de 1-2 km de espessura","Folhelhos do Paleoceno fraturados por tectônica extensional","Conglomerados do Eoceno em lâmina d'água de 300-500m"],
+    correta:1, explicacao:"As descobertas do pré-sal da Bacia de Santos (Lula, Búzios, Sapinhoá, etc.) ocorrem em carbonatos lacustres do Barremiano-Aptiano (Cretáceo Inferior), em lâminas d'água de 2000-3000m, com o reservatório a profundidades de 5000-7000m (abaixo do nível do mar), sob camada de sal de 1-2 km. São os maiores campos do Brasil." },
+
+  { id:232, fonte:"prova_real", ano:2011, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"difícil",
+    pergunta:"Em simulação numérica de reservatórios pelo método de diferenças finitas, o modelo de grade (grid) mais usado para reservatórios com geometria complexa como falhas e dobras é:",
+    opcoes:["Grade cartesiana regular (corner-point grid retangular) — simples mas não captura geometrias complexas","Corner-point grid (CPG) ou 'pillar grid' — permite representar falhas, inclinações e contatos irregulares adaptando os blocos à geometria da rocha","Grade radial cilíndrica — usada para simular todo o reservatório","Grade 1D vertical — suficiente para qualquer reservatório heterogêneo"],
+    correta:1, explicacao:"O corner-point grid (grid de cantos) define blocos por 8 cantos interligados por pilares verticais ou inclinados. Permite: representar falhas sem aproximações excessivas, ajustar blocos à geometria estratigráfica e modelar reservatórios inclinados. Simuladores como ECLIPSE (SLB) e Intersect usam CPG como padrão. É muito mais flexível que grades cartesianas regulares." },
+
+  { id:233, fonte:"prova_real", ano:2011, bloco:"I", assunto:"Mecânica dos Fluidos", dificuldade:"média",
+    pergunta:"O modelo reológico de Bingham Plástico para fluidos de perfuração é caracterizado por:",
+    opcoes:["Ser um fluido newtoniano com viscosidade constante em qualquer taxa de cisalhamento","Apresentar tensão limite de escoamento (yield point — YP) abaixo da qual o fluido não flui, e viscosidade plástica (PV) acima desse limite","Ter viscosidade que diminui com o aumento da taxa de cisalhamento sem tensão limite (Power Law)","Ser puramente elástico sem comportamento viscoso"],
+    correta:1, explicacao:"Bingham Plástico: τ = YP + PV × dγ/dt. Abaixo do yield point (YP), o fluido se comporta como sólido (não flui). Acima, flui com viscosidade plástica (PV) constante. Os parâmetros PV (em cP) e YP (em lb/100ft²) são medidos com viscosímetro Fann rotacional. Controlam a capacidade de suspensão de cascalho e a pressão de circulação." },
+
+  { id:234, fonte:"prova_real", ano:2011, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"O BOP (Blowout Preventer) do tipo 'pipe ram' tem como função específica:",
+    opcoes:["Selar completamente o poço sem tubulação de perfuração, funcionando como tampão total","Selar o espaço anular ao redor de uma coluna de perfuração de diâmetro específico, mantendo o poço fechado com a coluna no interior","Controlar a direção do poço durante a perfuração direcional","Medir a pressão hidrostática da lama durante a circulação"],
+    correta:1, explicacao:"Pipe rams: blocos de borracha que fecham o espaço anular ao redor de uma coluna de tamanho específico (ex: 5\" DP). Para fechar o poço sem tubulação: blind/shear ram (cega ou cisalhadora). O BOP anular (preventer esférico) fecha ao redor de qualquer diâmetro (mais versátil). O conjunto tipicamente tem: 1 esférico + 2-4 rams em série." },
+
+  { id:235, fonte:"prova_real", ano:2011, bloco:"II", assunto:"Geologia do Petróleo", dificuldade:"média",
+    pergunta:"O regime contratual de Partilha de Produção (Production Sharing Agreement — PSA), adotado no Brasil para o pré-sal após 2010, difere da Concessão porque:",
+    opcoes:["Na concessão o Estado fica com todo o petróleo; na partilha o concessionário fica com tudo","Na partilha, o Estado (por meio da Petrobras e PPSA) recebe uma parcela do 'petróleo-lucro' após o concessionário recuperar seus custos ('cost oil'); na concessão, o operador paga royalties e participações mas retém a propriedade da produção","Na partilha, não há pagamento de royalties ou bônus de assinatura","Na concessão, a Petrobras é obrigatoriamente operadora com 30% mínimo de participação"],
+    correta:1, explicacao:"PSA: concessionário assume o risco exploratório; em caso de descoberta, produz e 'recupera' seus custos (cost oil = custo/preço); o restante (profit oil) é dividido entre concessionário e Estado (% definido no contrato). Na concessão, o concessionário paga royalties (5-15%) e participações especiais, mas retém a produção menos esses encargos. O PSA maximiza a participação estatal em grandes descobertas." },
+
+  { id:236, fonte:"prova_real", ano:2011, bloco:"Mat", assunto:"Matemática Financeira", dificuldade:"média",
+    pergunta:"Um projeto de desenvolvimento de campo tem os seguintes fluxos de caixa (MM$): Ano 0: -500; Ano 1: +100; Ano 2: +200; Ano 3: +300; Ano 4: +200. Com taxa de desconto de 10% ao ano, o VPL (Valor Presente Líquido) é aproximadamente:",
+    opcoes:["-500 + 91 + 165 + 225 + 137 = +118 MM$ (VPL > 0 — projeto viável)","-500 + 100 + 200 + 300 + 200 = +300 MM$ (soma sem desconto)","+100 MM$ (sem calcular o desconto temporal)","-500 MM$ (apenas o investimento)"],
+    correta:0, explicacao:"VPL = -500 + 100/1,1 + 200/1,1² + 300/1,1³ + 200/1,1⁴ = -500 + 90,9 + 165,3 + 225,4 + 136,6 = +118,2 MM$. VPL > 0 indica que o projeto cria valor acima da taxa de retorno exigida de 10%. Se VPL < 0, o projeto destrói valor. TIR é a taxa que zera o VPL (~19% neste caso)." },
+
+  { id:237, fonte:"prova_real", ano:2011, bloco:"II", assunto:"Reservatórios de Petróleo", dificuldade:"difícil",
+    pergunta:"A equação de Archie para determinar a saturação de água em reservatórios é: Sw^n = (a × Rw) / (φ^m × Rt). Nessa equação, 'Rt' representa:",
+    opcoes:["A resistividade da água de formação (Rw) corrigida pela temperatura","A resistividade verdadeira da formação medida pelo perfil de resistividade profunda (ILD/ILM/RILM)","A resistividade da lama de perfuração que invadiu a zona","A resistividade da rocha matriz seca (sem fluido)"],
+    correta:1, explicacao:"Rt = resistividade verdadeira da formação (zone not flushed by mud). Medida pelo perfil de indução profunda (ILD) ou laterolog (LLD). Rw = resistividade da água de formação (obtida de amostras ou correlações com salinidade/temperatura). φ = porosidade; m = expoente de cimentação (≈2); n = expoente de saturação (≈2); a = constante (≈1). Para Sw=1: Rt = F×Rw = Ro." },
+
+  { id:238, fonte:"prova_real", ano:2011, bloco:"II", assunto:"Sistemas Submarinos", dificuldade:"difícil",
+    pergunta:"A completação inteligente (intelligent/smart completion) com válvulas de controle de fluxo (ICV — Inflow Control Valve) permite:",
+    opcoes:["Substituir o BOP em emergências de controle de poço","Controlar individualmente a produção de diferentes zonas ou trechos horizontais sem intervenção no poço, otimizando a produção e retardando o breakthrough de água ou gás","Medir a composição química do fluido produzido em tempo real","Automatizar apenas a injeção de inibidores de corrosão e parafinas"],
+    correta:1, explicacao:"ICVs são válvulas instaladas no completamento que permitem controlar o fluxo zona a zona (ou segmento a segmento em poços horizontais) remotamente da superfície. Benefícios: equilibrar contribuições de diferentes zonas, isolar zonas com água ou gás precocemente, maximizar a recuperação. Combinadas com sensores de pressão/temperatura (PDG), formam a base do monitoramento em tempo real de reservatórios (smart fields)." },
+
+  // ── 2010 ─────────────────────────────────────────────
+  { id:239, fonte:"prova_real", ano:2010, bloco:"II", assunto:"Perfuração de Poços", dificuldade:"média",
+    pergunta:"O fenômeno de 'diferencial de prisão' (differential sticking) em perfuração ocorre quando:",
+    opcoes:["A coluna de perfuração perde circulação por excesso de pressão na lama","A coluna fica presa contra a parede do poço devido à diferença de pressão entre a coluna de lama (P_lama > P_formação), forçando o tubo contra o reboco da lama com grande força de atrito","A broca fratura a formação ao encontrar altas temperaturas de reservatório","A rotação da coluna gera vibração ressonante com a formação"],
+    correta:1, explicacao:"Differential sticking: ocorre em formações permeáveis onde o filtrado da lama forma reboco (filter cake). A diferença P_lama - P_formação (overbalance) empurra a coluna contra o reboco com força: F = ΔP × A_contato. Prevenção: manter overbalance mínimo, usar lama com baixo filtrado, lubrificantes. Liberação: reduzir densidade da lama (se seguro), aplicar torque/peso, spotting fluids." },
+
+  { id:240, fonte:"prova_real", ano:2010, bloco:"II", assunto:"Processamento Primário", dificuldade:"média",
+    pergunta:"O processo de dessalgação do petróleo (desalting) antes do refino tem como objetivo principal:",
+    opcoes:["Remover o H₂S e mercaptanas para atender às especificações de enxofre","Remover cloretos de sódio, magnésio e cálcio dissolvidos na água de formação emulsionada no óleo, evitando corrosão e envenenamento de catalisadores na refinaria","Reduzir o teor de metais pesados (Ni, V) do petróleo pesado","Ajustar o °API do óleo para atender às especificações de exportação"],
+    correta:1, explicacao:"Sais de Na, Mg e Ca emulsionados no óleo (tipicamente 5-200 PTB) causam: corrosão nos fornos de destilação (NaCl + vapor → HCl), envenenamento de catalisadores de craqueamento (Na, Ca) e formação de depósitos. O dessalgador usa água de lavagem + campo elétrico (eletrostático) para coalescer gotículas de água salgada, que se depositam e são drenadas. Meta: < 0,5 PTB na saída." },
 ];
 
 const STORAGE_KEY = "petrobras_quiz_progress";
+const FC_STORAGE_KEY = "petrobras_fc_progress";
+
+const FLASHCARDS_DB = [
+  // ── FÓRMULAS ─────────────────────────────────────────
+  { id:"f01", categoria:"Fórmulas", frente:"Lei de Darcy — escoamento em meios porosos", verso:"q = (k × A × ΔP) / (μ × L)\n\nOnde:\n• q = vazão volumétrica (m³/s)\n• k = permeabilidade (m² ou Darcy)\n• A = área de seção transversal (m²)\n• ΔP = diferencial de pressão (Pa)\n• μ = viscosidade dinâmica (Pa·s)\n• L = comprimento (m)\n\nAplica-se a fluxo monofásico laminar em meio poroso. Base de toda a engenharia de reservatórios." },
+  { id:"f02", categoria:"Fórmulas", frente:"Número de Reynolds", verso:"Re = ρVD/μ = VD/ν\n\nOnde:\n• ρ = densidade do fluido (kg/m³)\n• V = velocidade média (m/s)\n• D = diâmetro característico (m)\n• μ = viscosidade dinâmica (Pa·s)\n• ν = viscosidade cinemática (m²/s)\n\nInterpretação:\n• Re < 2.300 → laminar\n• Re > 4.000 → turbulento\n• 2.300-4.000 → transição" },
+  { id:"f03", categoria:"Fórmulas", frente:"Equação de Bernoulli (fluido ideal)", verso:"P + ½ρV² + ρgz = constante\n\nOu entre pontos 1 e 2:\nP₁ + ½ρV₁² + ρgz₁ = P₂ + ½ρV₂² + ρgz₂\n\nTermos:\n• P = pressão estática (Pa)\n• ½ρV² = pressão dinâmica (Pa)\n• ρgz = pressão potencial (Pa)\n\nAplica-se a fluido ideal, incompressível, em regime permanente ao longo de uma linha de corrente." },
+  { id:"f04", categoria:"Fórmulas", frente:"Gravidade API (°API)", verso:"°API = 141,5 / SG₆₀°F − 131,5\n\nOnde SG = gravidade específica a 60°F (em relação à água)\n\nClassificação:\n• Óleo leve: °API > 31\n• Óleo médio: 22 ≤ °API ≤ 31\n• Óleo pesado: °API < 22\n• Óleo extra-pesado: °API < 10\n\nMaior °API → menos denso → mais leve → geralmente mais valioso." },
+  { id:"f05", categoria:"Fórmulas", frente:"ECD — Equivalent Circulating Density", verso:"ECD = ρ_estático + ΔP_anular / (g × TVD)\n\nOu em unidades práticas (ppg):\nECD (ppg) = MW (ppg) + ΔP_anular (psi) / (0,052 × TVD (ft))\n\nOnde:\n• MW = peso da lama estática\n• ΔP_anular = perda de pressão por atrito no espaço anular\n• TVD = profundidade vertical verdadeira\n\nECD > pressão de fraturamento → perde circulação\nECD < pressão de formação → kick" },
+  { id:"f06", categoria:"Fórmulas", frente:"IPR de Vogel (poço com gás em solução)", verso:"q / q_max = 1 − 0,2(P_wf/P_r) − 0,8(P_wf/P_r)²\n\nOnde:\n• q = vazão na pressão de fundo P_wf\n• q_max = AOF (Absolute Open Flow) quando P_wf = 0\n• P_r = pressão média de reservatório\n• P_wf = pressão de fundo fluxente\n\nAplica-se a P_r < P_b (abaixo do ponto de bolha). Para P_r > P_b, usa-se a equação linear de Darcy combinada." },
+  { id:"f07", categoria:"Fórmulas", frente:"Fator Volume de Formação do Óleo (Bo)", verso:"Bo = Volume do óleo NAS CONDIÇÕES DE RESERVATÓRIO / Volume do óleo NA SUPERFÍCIE\n\nCaracterísticas:\n• Bo > 1 sempre (óleo no reservatório contém gás dissolvido, é mais volumoso)\n• Bo aumenta com pressão acima de P_b (expansão)\n• Bo máximo em P = P_b\n• Abaixo de P_b: Bo cai (gás sai de solução, óleo encolhe)\n\nUnidade: bbl/STB ou m³/m³\nValores típicos: 1,05 a 2,0 para óleos leves" },
+  { id:"f08", categoria:"Fórmulas", frente:"VOPL — Volume Original de Petróleo no Lugar", verso:"VOPL = (A × h × φ × (1 − Swi)) / Bo\n\nOnde:\n• A = área do reservatório (m² ou acres)\n• h = espessura líquida permoporosa (m ou ft)\n• φ = porosidade fracional\n• Swi = saturação de água irredutível (fração)\n• Bo = fator volume de formação do óleo (m³/m³ ou bbl/STB)\n\nVOPL em STB: VOPL = 7758 × A(acres) × h(ft) × φ × (1−Swi) / Bo\nFator de recuperação (FR) típico: 20–50%" },
+  { id:"f09", categoria:"Fórmulas", frente:"Fator Volume de Formação do Gás (Bg)", verso:"Bg = 0,02829 × Z × T(K) / P(kPa)\n\nOu em unidades oilfield:\nBg = 0,00504 × Z × T(°R) / P(psia)  [em ft³/scf]\n\nCaracterísticas:\n• Z = fator de compressibilidade do gás\n• Bg aumenta com queda de pressão (gás expande)\n• É a força motriz de produção em reservatórios de gás\n\nVGPL (Volume de Gás Produzível):\nGp = VGPL × (1/Bg_i − 1/Bg_abandono)" },
+  { id:"f10", categoria:"Fórmulas", frente:"Equação de Archie — Saturação de Água", verso:"Sw^n = (a × Rw) / (φ^m × Rt)\n\nParametros tipicos:\n• a ≈ 1 (constante de tortuosidade)\n• m ≈ 2 (expoente de cimentação)\n• n ≈ 2 (expoente de saturação)\n\nOnde:\n• Sw = saturação de água (fração)\n• Rw = resistividade da água de formação\n• φ = porosidade\n• Rt = resistividade verdadeira da formação\n\nFator de formação: F = Ro/Rw = a/φ^m\nÍndice de resistividade: RI = Rt/Ro = 1/Sw^n" },
+  { id:"f11", categoria:"Fórmulas", frente:"Gradiente de Pressão Hidrostática", verso:"G (kPa/m) = ρ (kg/m³) × g (m/s²) / 1000\nG (psi/ft) = 0,433 × SG\n\nExemplos:\n• Água doce (SG=1,00): 9,81 kPa/m = 0,433 psi/ft\n• Água salgada (SG=1,03): 10,1 kPa/m = 0,446 psi/ft\n• Lama 1,2 g/cm³: 11,77 kPa/m = 0,520 psi/ft\n\nPressão hidrostática: P = G × TVD\nOverbalance = P_lama − P_formação > 0 (para evitar kick)" },
+  { id:"f12", categoria:"Fórmulas", frente:"Equação de Darcy-Weisbach (perda de carga em tubulação)", verso:"ΔP = f × (L/D) × (ρV²/2)\n\nOnde:\n• f = fator de atrito de Darcy-Weisbach\n• L = comprimento da tubulação (m)\n• D = diâmetro interno (m)\n• ρ = densidade do fluido (kg/m³)\n• V = velocidade média (m/s)\n\nFator f:\n• Laminar: f = 64/Re\n• Turbulento: diagrama de Moody / Colebrook-White\n\nNota: Fanning friction factor = f/4" },
+  { id:"f13", categoria:"Fórmulas", frente:"Eficiência de Carnot", verso:"η_Carnot = 1 − T_c / T_h\n\nOnde:\n• T_c = temperatura da fonte fria (K)\n• T_h = temperatura da fonte quente (K)\n• Temperaturas SEMPRE em Kelvin\n\nÉ a máxima eficiência teórica possível para qualquer máquina térmica operando entre T_c e T_h.\n\nExemplo: ciclo operando entre 500K e 300K:\nη = 1 − 300/500 = 0,40 = 40%\n\nNenhuma máquina real atinge η_Carnot." },
+  { id:"f14", categoria:"Fórmulas", frente:"Critério de Von Mises (tensão equivalente)", verso:"σ_VM = √(σ₁² − σ₁σ₂ + σ₂²) ≤ σ_y\n\nOu em tensão principal geral (3D):\nσ_VM = √[(½)((σ₁−σ₂)² + (σ₂−σ₃)² + (σ₃−σ₁)²)]\n\nConceito: escoamento ocorre quando a energia de deformação distorcional atinge o valor crítico.\n\nUsado para: verificação de revestimentos de poço, tubulações de pressão, estruturas offshore.\n\nContraste: critério de Tresca (tensão máxima de cisalhamento) é mais conservador." },
+  { id:"f15", categoria:"Fórmulas", frente:"Equação de Euler para Turbomáquinas", verso:"W/ṁ = u₁Vu₁ − u₂Vu₂\n\nOnde:\n• W = trabalho da máquina (W)\n• ṁ = vazão mássica (kg/s)\n• u = velocidade tangencial do rotor (m/s)\n• Vu = componente tangencial da velocidade absoluta do fluido (m/s)\n\nPara bomba centrífuga: W/ṁ = u₂Vu₂ − u₁Vu₁ > 0 (adiciona energia)\nPara turbina: W/ṁ = u₁Vu₁ − u₂Vu₂ > 0 (extrai energia)" },
+  { id:"f16", categoria:"Fórmulas", frente:"Razão de Mobilidade na Injeção de Água (M)", verso:"M = λ_água / λ_óleo = (k_rw/μ_w) / (k_ro/μ_o)\n\nInterpretação:\n• M ≤ 1: deslocamento estável (piston-like) — ideal\n• M > 1: fingering viscoso — água rompe prematuramente pelos caminhos mais permeáveis\n• M >> 1: varredura muito ineficiente\n\nMétodos para reduzir M:\n• Injeção de polímero: aumenta μ_w, reduz M\n• Controle de injeção (profile modification)\n\nEficiência de varredura depende fortemente de M." },
+  { id:"f17", categoria:"Fórmulas", frente:"Declínio Exponencial de Produção", verso:"q(t) = q₀ × e^(−D × t)\n\nOnde:\n• q₀ = vazão inicial\n• D = taxa de declínio (1/tempo, ex: ano⁻¹)\n• t = tempo\n\nProdução acumulada:\nNp = (q₀ − q) / D\n\nRelação com declínio hiperbólico (b=0):\n• b = 0 → exponencial (mais conservador)\n• 0 < b < 1 → hiperbólico\n• b = 1 → harmônico (mais otimista)\n\nO exponencial é o mais usado em relatórios de reserva." },
+  { id:"f18", categoria:"Fórmulas", frente:"Balanço de Energia (1ª Lei — Volume de Controle)", verso:"Q̇ − Ẇ = ṁ[(h₂ − h₁) + (V₂² − V₁²)/2 + g(z₂ − z₁)]\n\nPara compressor/turbina adiabático em regime permanente:\nẆ = ṁ(h₂ − h₁)\n\nPara bomba (fluido incompressível):\nẆ = ṁ[(P₂ − P₁)/ρ + (V₂² − V₁²)/2 + g(z₂ − z₁)]\n\nNota: usa entalpia (h) — não energia interna (u) — porque inclui trabalho de fluxo PV. Fundamental para dimensionar compressores, turbinas e trocadores de calor." },
+  { id:"f19", categoria:"Fórmulas", frente:"Permeabilidade Relativa e Saturação", verso:"k_ro + k_rw < 1 (sistema bifásico)\n\nPontos chave:\n• k_ro máxima quando Sw = Swi (sem água livre)\n• k_rw máxima quando So = Sor (sem óleo livre)\n• Ponto de cruzamento tipicamente em Sw ≈ 50-70%\n\nCurvas de Corey:\nk_ro = k_ro_max × ((1 − Sw − Sor)/(1 − Swi − Sor))^n_o\nk_rw = k_rw_max × ((Sw − Swi)/(1 − Swi − Sor))^n_w\n\nAs curvas são obtidas de testes de fluxo em laboratório (experimentos de deslocamento)." },
+  { id:"f20", categoria:"Fórmulas", frente:"Pressão de Capilaridade em Reservatórios", verso:"Pc = P_não-molhante − P_molhante = 2γ cosθ / r\n\nOnde:\n• γ = tensão interfacial fluido-fluido (N/m)\n• θ = ângulo de contato (molhabilidade)\n• r = raio do poro (m)\n\nConsequências:\n• Em poros menores → Pc maior → água irredutível (Swi)\n• Pc > 0 em zona de transição\n• Ponto de entrada (entry pressure) determina eficiência do selo\n\nAlturas da zona de transição:\nh = Pc / (ρ_água − ρ_óleo) × g" },
+  { id:"f21", categoria:"Fórmulas", frente:"Número de Nusselt e Transferência de Calor", verso:"Nu = h × L / k_f = f(Re, Pr)\n\nOnde:\n• h = coeficiente de transferência de calor convectivo (W/m²K)\n• L = comprimento característico (m)\n• k_f = condutividade térmica do fluido (W/mK)\n\nNú de Prandtl: Pr = μ × cp / k_f (≈ 7 para água, ≈ 0,71 para ar)\n\nCorrelações:\n• Dutos turbulentos: Nu = 0,023 Re^0,8 Pr^0,4 (Dittus-Boelter)\n• Placas: Nu = 0,332 Re^0,5 Pr^(1/3) (laminar)\n\nLei de Fourier (condução): q = −kA(dT/dx)" },
+  { id:"f22", categoria:"Fórmulas", frente:"BSW — Cálculo de Produção de Óleo", verso:"BSW (%) = (V_água / V_fluido_total) × 100\n\nProdução de óleo:\nq_óleo = q_total × (1 − BSW/100)\n\nExemplo:\nq_total = 10.000 m³/d, BSW = 80%\nq_óleo = 10.000 × 0,20 = 2.000 m³/d\nq_água = 10.000 × 0,80 = 8.000 m³/d\n\nImpacto:\n• BSW alto → alto OPEX (tratamento de água)\n• Limite de processamento de água → restrição de produção\n• BSW tipicamente aumenta com o tempo de produção" },
+  { id:"f23", categoria:"Fórmulas", frente:"RGO — Razão Gás-Óleo de Produção", verso:"RGO = q_gás (scf ou m³) / q_óleo (STB ou m³)\n\nUnidades:\n• Sistema americano: scf/STB\n• Sistema SI: m³/m³\n\nInterpretação:\n• RGO crescente → drenagem da capa de gás ou abaixo do ponto de bolha\n• RGO = Rs (em solução) → óleo saturado produzindo apenas gás dissolvido\n• RGO alto em poços com capa de gás → problema de cusping\n\nGás associado total:\nq_gás = q_óleo × RGO\n\nGLR (Gas-Liquid Ratio) é similar mas inclui água." },
+  { id:"f24", categoria:"Fórmulas", frente:"Equação de VPL (Valor Presente Líquido)", verso:"VPL = Σ[FC_t / (1 + i)^t] − I₀\n\nOnde:\n• FC_t = fluxo de caixa no período t\n• i = taxa de desconto (WACC ou TMA)\n• I₀ = investimento inicial\n• t = período de tempo\n\nRegra de decisão:\n• VPL > 0 → projeto viável (cria valor)\n• VPL = 0 → retorno exatamente = taxa exigida\n• VPL < 0 → projeto não viável\n\nTIR = taxa que torna VPL = 0\nPayback = tempo para recuperar I₀" },
+  { id:"f25", categoria:"Fórmulas", frente:"Fórmula de Hazen-Williams (água em tubulações)", verso:"V = 0,8492 × C × R^0,63 × S^0,54\n\nOnde:\n• V = velocidade (m/s)\n• C = coeficiente de Hazen-Williams (100-150 para tubos novos)\n• R = raio hidráulico = A/P (m)\n• S = gradiente hidráulico = hf/L\n\nAlternativa com vazão:\nQ = 0,2785 × C × D^2,63 × hf^0,54 / L^0,54\n\nUsada para água em regime turbulento. Mais simples que Darcy-Weisbach mas aplicável apenas para água em condições normais de temperatura." },
+
+  // ── SIGLAS ───────────────────────────────────────────
+  { id:"s01", categoria:"Siglas", frente:"ANM", verso:"Árvore de Natal Molhada (Wet Christmas Tree)\n\nEquipamento instalado no topo do poço submarino que controla o fluxo de produção e injeção. Contém válvulas de produção, injeção de inibidores, sensores de pressão/temperatura e conexões umbilicais.\n\nOperada remotamente pelo SCM ou por ROV.\nContraposição: ANS = Árvore de Natal Seca (seco = na superfície)." },
+  { id:"s02", categoria:"Siglas", frente:"FPSO", verso:"Floating Production Storage and Offloading\n(Unidade Flutuante de Produção, Armazenamento e Transferência)\n\nEmbarcação (geralmente navio convertido) que:\n• Produz e processa o petróleo e gás\n• Armazena o óleo produzido nos tanques do casco\n• Transfere o óleo para navios aliviadores (offloading) por transferência ship-to-ship\n\nAmplamente usado no pré-sal. Ex: FPSO Cidade de Angra dos Reis, FPSO P-70.\nVantagem: pode ser relocado ao fim do campo." },
+  { id:"s03", categoria:"Siglas", frente:"BCS", verso:"Bomba Centrífuga Submersa (Electric Submersible Pump — ESP)\n\nMétodo de elevação artificial composto por:\n• Bomba centrífuga multistágio submersa no poço\n• Motor elétrico submerso\n• Cabo elétrico de potência (power cable)\n• Transformador de superfície e VSD (Variable Speed Drive)\n\nVantagens: alta produtividade, grande faixa de operação\nDesvantagens: sensível a gás livre e sólidos, difícil manutenção\nUso típico: poços de alta produção com baixo GOR." },
+  { id:"s04", categoria:"Siglas", frente:"DST", verso:"Drill Stem Test — Teste de Formação em Hastes\n\nTeste realizado durante a perfuração para avaliar o potencial de produção de uma formação. Etapas:\n1. Fixação de packers acima e abaixo da zona de interesse\n2. Abertura para produção (flow period)\n3. Fechamento para recuperação de pressão (buildup)\n4. Análise de Horner para obter k, S e P*\n\nFornece: pressão estática do reservatório, permeabilidade, skin, e amostra de fluido." },
+  { id:"s05", categoria:"Siglas", frente:"MWD", verso:"Measurement While Drilling\n(Medição Durante a Perfuração)\n\nSistema integrado à coluna de perfuração que transmite dados em tempo real para a superfície via mud pulse telemetry ou eletromagnético:\n\nMede:\n• Inclinação e azimute do poço (direcional)\n• Peso sobre a broca (WOB), torque, rotação (RPM)\n• Temperatura de fundo, pressão de circulação\n\nUsado para: guiar poços direcionais e horizontais em tempo real." },
+  { id:"s06", categoria:"Siglas", frente:"LWD", verso:"Logging While Drilling\n(Perfilagem Durante a Perfuração)\n\nExtensão do MWD que inclui sensores de perfilagem geofísica na BHA (Bottom Hole Assembly):\n\nMedições típicas:\n• Resistividade (azimuthal)\n• GR (Raios Gama)\n• Densidade / Nêutron (porosidade)\n• Sônico\n• Imagem de poço\n\nVantagem: avalia a formação antes de entrar em contato com filtrado da lama. Crucial para ajuste em tempo real (geosteering) de poços horizontais." },
+  { id:"s07", categoria:"Siglas", frente:"ROV", verso:"Remotely Operated Vehicle\n(Veículo Operado Remotamente)\n\nSubmarino não tripulado com manipuladores mecânicos, câmeras e ferramentas especializadas, operado da superfície via cabo umbilical.\n\nFunções:\n• Inspeção visual e por sonar de equipamentos submarinos\n• Operação de válvulas na ANM e manifolds\n• Instalação/conexão de equipamentos\n• Coleta de amostras e medições\n\nClassificações: Work ROV (heavy work), Observation ROV, WROV." },
+  { id:"s08", categoria:"Siglas", frente:"SCM", verso:"Subsea Control Module\n(Módulo de Controle Submarino)\n\nUnidade instalada na ANM ou manifold que recebe comandos elétricos e distribui fluido hidráulico para atuar as válvulas do poço.\n\nComponentes:\n• Eletrônica de controle (MCS — Master Control Station na superfície)\n• Válvulas solenóides\n• Conexões hidráulicas e elétricas do umbilical\n\nFaz parte do SCSSV (Surface Controlled Subsurface Safety Valve) e sistema de safety shutdown." },
+  { id:"s09", categoria:"Siglas", frente:"GLP", verso:"Gás Liquefeito de Petróleo\n(LPG — Liquefied Petroleum Gas)\n\nMistura de propano (C₃) e butano (C₄) produzida no refino do petróleo ou processamento do gás natural.\n\nCaracterísticas:\n• Armazenado sob pressão (~8 bar) em estado líquido\n• Libera-se como gás ao ser despressurizado\n\nUsos:\n• Uso doméstico (botijão de gás)\n• Combustível automotivo (GLP automotivo)\n• Matéria-prima petroquímica\n• Propelente e refrigeração\n\nAlternativa ao gás natural encanado em regiões remotas." },
+  { id:"s10", categoria:"Siglas", frente:"VOPL", verso:"Volume Original de Petróleo no Lugar\n(OOIP — Original Oil In Place)\n\nVolume total de óleo existente no reservatório antes de qualquer produção, nas condições de superfície.\n\nFórmula:\nVOPL = (A × h × φ × (1 − Swi)) / Bo\n\nDistinção importante:\n• VOPL ≠ reserva (apenas uma fração é recuperável)\n• Reserva = VOPL × Fator de Recuperação (FR)\n• FR típico: 20–50%\n\nEquivalente em inglês: STOIIP (Stock Tank Original Oil In Place)." },
+  { id:"s11", categoria:"Siglas", frente:"EOR", verso:"Enhanced Oil Recovery\n(Recuperação Avançada de Petróleo)\n\nMétodos para aumentar a produção além da recuperação primária e secundária:\n\nTipos:\n• Térmicos: injeção de vapor, SAGD, combustão in situ\n• Químicos: polímeros (↑μ_água), surfactantes (↓tensão interfacial), álcali\n• Miscíveis: CO₂ miscível, injeção de GLP, nitrogênio\n• Microbianos: MEOR\n\nMeta: mobilizar o óleo residual (Sor) que permanece após waterflood.\nFR com EOR pode atingir 60–70%." },
+  { id:"s12", categoria:"Siglas", frente:"PDC", verso:"Polycrystalline Diamond Compact\n(Broca de Diamante Policristalino Compacto)\n\nBroca de perfuração com pastilhas de diamante sintético (PDC cutters) fixadas em um corpo de tungstênio.\n\nCaracterísticas:\n• Sem peças móveis (diferente da tricone)\n• Alta taxa de penetração (ROP) em formações médias a duras\n• Longa vida em formações uniformes\n• Sensível a formações muito abrasivas ou intercaladas\n\nDomina o mercado atual (60-70% das brocas usadas).\nExemplos de fornecedores: Smith Bits, Reed Hycalog, Hughes Christensen." },
+  { id:"s13", categoria:"Siglas", frente:"WOB", verso:"Weight on Bit\n(Peso Sobre a Broca)\n\nForça compressiva aplicada sobre a broca durante a perfuração, expressa em toneladas-força (tf) ou kN.\n\nFunção: forçar a broca contra a formação para promover corte da rocha.\n\nEfeitos:\n• WOB maior → maior ROP (taxa de penetração) até um limite\n• WOB excessivo → deflexão da coluna, desvio do poço, desgaste prematuro da broca\n• WOB insuficiente → broca 'surfando' sem penetração efetiva\n\nMedido pelo MWD ou por peso suspenso − peso indicado." },
+  { id:"s14", categoria:"Siglas", frente:"BOP", verso:"Blowout Preventer\n(Preventor de Erupção)\n\nEquipamento de segurança instalado na boca do poço para controlar kicks e prevenir blowouts.\n\nTipos de rams:\n• Pipe ram: sela ao redor de uma coluna de diâmetro específico\n• Blind ram: fecha completamente o poço sem tubulação\n• Shear/blind ram: cisalha a coluna e fecha o poço\n\nPreventor esférico (anular): fecha ao redor de qualquer diâmetro.\n\nEmpilhamento típico: 1 esférico + 2-4 rams (configuração BOP stack)." },
+  { id:"s15", categoria:"Siglas", frente:"ANP", verso:"Agência Nacional do Petróleo, Gás Natural e Biocombustíveis\n\nÓrgão regulador federal brasileiro criado pela Lei nº 9.478/1997 (Lei do Petróleo).\n\nCompetências:\n• Regular as atividades de E&P, refino, transporte e distribuição\n• Conceder, prorrogar e revogar licenças e autorizações\n• Realizar licitações de blocos exploratórios (rodadas de licitação)\n• Fiscalizar o cumprimento das obrigações contratuais\n• Definir preços de referência e especificações de qualidade\n\nVinculada ao Ministério de Minas e Energia (MME)." },
+  { id:"s16", categoria:"Siglas", frente:"CAPEX / OPEX", verso:"CAPEX = Capital Expenditure (Despesas de Capital)\n• Investimentos em ativos: plataformas, poços, dutos, equipamentos\n• Acontece principalmente na fase de desenvolvimento do campo\n• Amortizado/depreciado ao longo do tempo\n\nOPEX = Operational Expenditure (Despesas Operacionais)\n• Custos de operação contínua: manutenção, pessoal, químicos, energia\n• Custo por barril produzido ($/bbl)\n• Determina a rentabilidade em períodos de baixo preço do petróleo\n\nTiping point: campo é viável quando preço_barril > OPEX/barril." },
+  { id:"s17", categoria:"Siglas", frente:"TLP", verso:"Tension Leg Platform\n(Plataforma de Pernas Tensionadas)\n\nEstrutura flutuante para produção offshore em lâminas d'água de 300-1.500m.\n\nCaracterísticas:\n• Casco semi-submersível ancorado por tendões verticais de aço (tensionados pela flutuabilidade)\n• Movimentos verticais (heave, pitch, roll) muito restritos pelos tendões\n• Permite drilling e completação diretamente da plataforma\n• Risers rígidos verticais (TTR — Top Tensioned Risers)\n\nExemplos no Brasil: P-19 (Bacia de Campos).\nAlternativas: SPAR, Semi-sub, FPSO." },
+  { id:"s18", categoria:"Siglas", frente:"PIG (Pipeline)", verso:"Pipeline Inspection Gauge\n(também: Pipeline Inspection Gadget)\n\nDispositivo lançado no interior de tubulações para:\n\nPIGs de limpeza:\n• Remoção de parafinas, hidratos, depósitos\n• Separação de produtos em batching\n\nPIGs inteligentes (Smart PIGs / ILI):\n• MFL (Magnetic Flux Leakage): detecta corrosão e defeitos na parede\n• Ultrassom (UT): mede espessura da parede com precisão\n• Geometria: detecta amassamentos e ovalamentos\n• Inspeciona centenas de km de duto sem parar a produção" },
+  { id:"s19", categoria:"Siglas", frente:"ECD (perfuração)", verso:"Equivalent Circulating Density\n(Densidade Equivalente de Circulação)\n\nA pressão total exercida no fundo do poço durante a circulação, expressa como densidade equivalente.\n\nECD = ρ_lama + ΔP_anular / (g × TVD)\n\nPor que importa:\n• ECD > Pressão de fraturamento → perda de circulação (lost circulation)\n• ECD < Pressão de formação → kick ou blowout\n• Janela de operação estreita: ECD deve estar entre P_formação e P_fratura\n\nControlado por: densidade da lama, vazão de bombeamento, viscosidade do fluido." },
+  { id:"s20", categoria:"Siglas", frente:"HIPPS", verso:"High Integrity Pressure Protection System\n(Sistema de Proteção de Alta Integridade contra Sobrepressão)\n\nSistema de segurança ativo que protege equipamentos de baixa pressão a jusante de fontes de alta pressão.\n\nComponentes:\n• Transmissores de pressão redundantes (2oo3 ou 1oo2)\n• Válvulas de bloqueio rápido (SDV — Shut-Down Valve)\n• Lógica de controle de segurança (SIL 2 ou 3)\n\nAplicação em petróleo: proteger separadores e risers contra overpressure vindo de poços de alta pressão.\nAlternativa mais compacta e rápida que PSVs (válvulas de alívio)." },
+  { id:"s21", categoria:"Siglas", frente:"SCR", verso:"Steel Catenary Riser\n(Riser Catenary de Aço)\n\nTubulação de aço em forma de catenária que conecta o poço/manifold no fundo do mar à plataforma flutuante.\n\nVantagens:\n• Custo menor que riser flexível (especialmente em grandes diâmetros)\n• Suporta alta pressão e temperatura\n• Facilidade de inspeção\n\nDesafios:\n• TDP (Touch Down Point): região de fadiga onde o riser toca no fundo\n• Movimentos da plataforma induzem fadiga nas conexões\n• VIV (Vortex Induced Vibration): correntes oceânicas causam oscilações\n\nUsado em FPSOs, semi-subs e SPARs." },
+  { id:"s22", categoria:"Siglas", frente:"PLEM / PLET", verso:"PLEM = Pipeline End Manifold\nPLET = Pipeline End Termination\n\nEstruturas submarinas instaladas no final de dutos:\n\nPLEM:\n• Distribui fluxo de um duto principal para múltiplas linhas\n• Contém válvulas de bloqueio e conexões para PIGs\n• Permite pig launching/receiving submerso\n\nPLET:\n• Conecta o duto ao equipamento final (ex: manifold, ANM)\n• Suporte mecânico e alinhamento de conexões\n\nAmbas são estruturas fixas no leito oceânico, instaladas por navios de lançamento ou guindastes." },
+  { id:"s23", categoria:"Siglas", frente:"SAGD", verso:"Steam Assisted Gravity Drainage\n(Drenagem por Gravidade Assistida a Vapor)\n\nMétodo de EOR térmico para óleos ultra-pesados e betuminosos.\n\nProcesso:\n• Dois poços horizontais paralelos verticalmente (1 acima do outro, ~5m)\n• Poço superior: injeta vapor contínuo → câmara de vapor se expande\n• Calor reduz drasticamente a viscosidade do óleo\n• Óleo e condensado drenam por gravidade para o poço inferior\n• Poço inferior: produz óleo e água de condensação\n\nUsado amplamente nas areias betuminosas do Alberta, Canadá.\nFR pode atingir 60-70% para betuminosos." },
+  { id:"s24", categoria:"Siglas", frente:"BSW", verso:"Basic Sediment & Water\n(Água e Sedimentos Básicos)\n\nFração volumétrica de água e sólidos no fluido produzido pelo poço:\n\nBSW (%) = (V_água + V_sólidos) / V_total_fluido × 100\n\nPor que importa:\n• Indica maturidade do campo (BSW cresce com o tempo)\n• Limita a produção quando a capacidade de tratamento de água é atingida\n• Impacta OPEX (tratamento de água produzida tem custo elevado)\n• Especificação de exportação: BSW < 0,5% (BS&W)\n\nBSW = 80% → apenas 20% do fluido é óleo." },
+  { id:"s25", categoria:"Siglas", frente:"GOR / RGO", verso:"GOR = Gas-Oil Ratio / RGO = Razão Gás-Óleo\n\nVolume de gás produzido por volume de óleo:\n• GOR = q_gás / q_óleo (scf/STB ou m³/m³)\n\nInterpretação:\n• GOR = Rs (gás em solução) → óleo operando em P = Pb\n• GOR crescente → indício de drenagem da capa de gás\n• GOR alto com óleo pesado → possível invasão de capa\n\nValores típicos:\n• Óleos pesados: < 50 m³/m³\n• Óleos leves: 50-500 m³/m³\n• Condensados: > 1000 m³/m³\n\nGLR (Gas-Liquid Ratio) = GOR + GWR (gas-water ratio)." },
+  { id:"s26", categoria:"Siglas", frente:"UEP / FPS", verso:"UEP = Unidade Estacionária de Produção (Brasil)\nFPS = Floating Production System (internacional)\n\nTermos genéricos para plataformas flutuantes de produção:\n\nTipos de UEP/FPS:\n• FPSO: navio com armazenamento\n• Semi-submersível: colunas e pontoons\n• TLP: Tension Leg Platform\n• SPAR: coluna vertical ancorada\n• Monocoluna: versão simplificada do SPAR\n\nA escolha depende de:\n• Lâmina d'água (LDA)\n• Volume de produção e armazenamento\n• Condições metoceanográficas\n• Custo e disponibilidade" },
+  { id:"s27", categoria:"Siglas", frente:"ILT / TLD", verso:"ILT = Isochronal Long-Term Test\nTLD = Teste de Longa Duração\n\nTestes de produção de longa duração realizados em poços para:\n\nTLD:\n• Confirmar produtividade de longo prazo\n• Coletar amostras de fluido para PVT\n• Avaliar comportamento do reservatório (limites, heterogeneidades)\n• Avaliar sistemas de separação e processamento\n• Duração: semanas a meses\n\nILT (gás):\n• Versão do isochronal test com período estendido de produção\n• Determina parâmetros de deliverabilidade (C, n da equação de back-pressure)\n• Mais preciso que o teste simples por eliminar efeito de armazenamento" },
+  { id:"s28", categoria:"Siglas", frente:"SSIV", verso:"Subsea Isolation Valve\n(Válvula de Isolamento Submarino)\n\nVálvula de bloqueio instalada na base de risers ou em dutos submarinos, que pode ser fechada remotamente em emergências (ex: ruptura do riser, emergência na plataforma).\n\nFunção:\n• Isolar a coluna de hidrocarbonetos entre o fundo do mar e a superfície\n• Prevenir derramamentos em caso de ruptura do riser ou emergência operacional\n• Parte do sistema de ESD (Emergency Shutdown System)\n\nDesign: fail-safe closed (fecha em caso de falha de energia ou sinal).\nOperada pelo sistema de controle umbilical ou por ROV." },
+  { id:"s29", categoria:"Siglas", frente:"MFL (inspeção de dutos)", verso:"MFL = Magnetic Flux Leakage\n(Vazamento de Fluxo Magnético)\n\nTécnica de inspeção em linha (ILI) para tubulações:\n\nPrincípio:\n• Magnetos de alta potência magnetizam a parede do tubo\n• Em regiões com corrosão, redução de espessura ou defeitos → o campo magnético 'vaza' para fora\n• Sensores (Hall sensors) detectam variações no campo magnético\n\nCapacidades:\n• Detecta corrosão interna e externa\n• Identifica defeitos de fabricação (laminações, trincas)\n• Mede perda de espessura de parede\n\nComplemento: Ultrassom (UT) para medições de precisão de espessura." },
+  { id:"s30", categoria:"Siglas", frente:"VSD (ESP)", verso:"VSD = Variable Speed Drive\n(Inversor de Frequência / Drive de Velocidade Variável)\n\nEquipamento de superfície que controla a velocidade de rotação do motor da BCS (bomba centrífuga submersa).\n\nFunção:\n• Ajustar a frequência de alimentação do motor (Hz)\n• Controlar a vazão produzida sem usar chokes\n• Otimizar o ponto de operação conforme declínio do reservatório\n\nVantagens:\n• Maior eficiência energética\n• Proteção do motor (sobrecorrente, subtensão)\n• Diagnóstico em tempo real (monitoramento de corrente e vibração)\n\nFaixa típica: 30-60 Hz (50 Hz = nominal no Brasil)." },
+
+  // ── CONCEITOS ────────────────────────────────────────
+  { id:"c01", categoria:"Conceitos", frente:"Janela do Petróleo", verso:"Faixa de temperatura em que a matéria orgânica (querogênio) gera predominantemente óleo:\n\n• 60°C a 120°C → janela do petróleo (geração de óleo)\n• 120°C a 180°C → janela do gás úmido / condensado\n• > 180°C → janela do gás seco\n\nAbaixo de 60°C: imaturidade — matéria orgânica não sofreu conversão suficiente.\n\nO grau de maturidade é medido pela Reflectância de Vitrinita (Ro):\n• Ro < 0,5% → imaturo\n• 0,5% < Ro < 1,3% → janela do petróleo\n• Ro > 1,3% → janela do gás seco" },
+  { id:"c02", categoria:"Conceitos", frente:"Skin Factor (Fator de Dano)", verso:"Parâmetro adimensional que quantifica o dano ou estimulação ao redor do poço:\n\n• S > 0: dano de formação (reduce produtividade)\n  - Invasão de filtrado de lama\n  - Finos mobilizados\n  - Incrustações (scale, parafina)\n  - Skin de perforação inadequada\n\n• S = 0: sem dano (condição ideal)\n\n• S < 0: estimulação (aumenta produtividade)\n  - Fraturamento hidráulico: S ≈ -3 a -7\n  - Acidificação matricial: S ≈ -2 a -4\n\nQueda de pressão adicional: ΔP_skin = 141,2qμB/(kh) × S" },
+  { id:"c03", categoria:"Conceitos", frente:"Ponto de Bolha (Bubble Point)", verso:"Pressão à qual o primeiro volume de gás se separa do óleo saturado:\n\n• P > Pb: óleo undersaturated (subsaturado) — gás 100% dissolvido, fluido monofásico\n• P = Pb: ponto de bolha — surge a primeira bolha de gás\n• P < Pb: óleo saturated (saturado) — duas fases coexistem (gás livre + óleo)\n\nAbaixo de Pb:\n• Bo começa a cair (óleo perde gás dissolvido)\n• RGO começa a subir\n• k_ro cai (gás livre reduz permeabilidade relativa ao óleo)\n\nDeterminado experimentalmente por análise PVT (teste CCE)." },
+  { id:"c04", categoria:"Conceitos", frente:"Mecanismo de Produção — Gás em Solução (Solution Gas Drive)", verso:"Mecanismo de produção onde a energia provém da expansão do gás dissolvido no óleo quando P cai abaixo de Pb:\n\nCaracterísticas:\n• Produção de GOR crescente ao longo do tempo\n• Queda de pressão rápida\n• Fator de recuperação típico: 5-30%\n• Não há suporte externo de energia (água ou capa de gás ativa)\n\nFases:\n1. P > Pb: produção com pressão declinante, GOR constante\n2. P < Pb: gás sai de solução, GOR aumenta, produção cai rapidamente\n\nSolução: injeção de água ou gás para manutenção de pressão." },
+  { id:"c05", categoria:"Conceitos", frente:"Mecanismo de Produção — Drive por Capa de Gás", verso:"Mecanismo onde a capa de gás (gas cap) se expande, deslocando o óleo para baixo:\n\nCaracterísticas:\n• Reservatório com acumulação de gás no topo (capa de gás)\n• Pressão decai mais lentamente que no solution gas drive\n• GOR cresce à medida que a capa avança para os poços\n• FR típico: 20-40%\n\nEstrutura:\n• Gás: no topo (menor densidade)\n• Óleo: zona intermediária\n• Água: na base (maior densidade)\n\nGerenciamento: evitar cusping de gás (produção prematura de gás cap). Pode ser reforçado por reinjection do gás produzido." },
+  { id:"c06", categoria:"Conceitos", frente:"Mecanismo de Produção — Drive por Água (Water Drive)", verso:"Mecanismo mais eficiente — aquífero adjacente fornece energia para produção:\n\nCaracterísticas:\n• Pressão declina lentamente ou se mantém (aquífero ativo)\n• GOR permanece baixo (gás não sai de solução)\n• BSW cresce com o tempo (avanço da frente de água)\n• FR mais alto: 35-60%\n\nTipos:\n• Edge water drive: aquífero lateral\n• Bottom water drive: aquífero abaixo do reservatório\n\nProblemas:\n• Coning de água (coning) em poços verticais\n• Fingering em heterogeneidades\n• Alta produção de água (alto OPEX)" },
+  { id:"c07", categoria:"Conceitos", frente:"Armadilha Anticlinal (Structural Trap)", verso:"Tipo mais comum de armadilha estrutural:\n\nForma: dobramento côncavo para baixo (anticlinal)\n• Petróleo migra para o topo do anticlinal (menor densidade)\n• Rocha selante (impermeável) acima retém os HC\n• Geometria convexa cria fechamento em todas as direções\n\nRequisitos:\n• Rocha reservatório porosa e permeável\n• Rocha selante eficiente (folhelho, evaporito, sal)\n• Fechamento estrutural adequado (spill point)\n\nExemplos:\n• Campos do Oriente Médio (Ghawar, Burgan)\n• Campos em bacias foreland\n\nAlternativas: falha, estratigráfica, domo salino." },
+  { id:"c08", categoria:"Conceitos", frente:"Armadilha Estratigráfica", verso:"Armadilha formada por variações laterais de fácies sedimentares (sem deformação estrutural):\n\nTipos principais:\n• Pinch-out: reservatório que afunila lateralmente até desaparecer (arenito que termina no folhelho)\n• Canal fluvial: arenito de canal isolado por folhelho\n• Recife (bioherm): carbonato orgânico circundado por folhelho\n• Variação diagenética: cimentação que reduz porosidade localmente\n\nDesafios:\n• Mais difícil de identificar por sísmica\n• Requer análise estratigráfica detalhada\n• Menor probabilidade de sucesso exploratório que traps estruturais\n\nExemplo brasileiro: campos eocênicos da Bacia de Campos." },
+  { id:"c09", categoria:"Conceitos", frente:"Querogênio — Tipos e Maturação", verso:"Querogênio: matéria orgânica insolúvel precursora de HC, dispersa na rocha geradora.\n\nTipos:\n• Tipo I (algal): gerador de óleo de boa qualidade (ex: Green River)\n• Tipo II (marinhos): gerador de óleo e gás — mais comum (ex: pré-sal brasileiro)\n• Tipo III (terrestre, carvão): gerador de gás preferencialmente\n• Tipo IV (inerte): não gera HC\n\nMaturação:\n• Diagênese (< 60°C): compactação, biogás biogênico\n• Catagênese (60-180°C): janela do petróleo e gás\n• Metagênese (> 180°C): gás seco, grafitização\n\nQuantidade: expressa como COT (Carbono Orgânico Total, %)" },
+  { id:"c10", categoria:"Conceitos", frente:"Saturação de Água Irredutível (Swi / Swc)", verso:"Saturação mínima de água que não pode ser deslocada por óleo — fica retida nos poros menores por forças capilares:\n\nCaracterísticas:\n• Swi típico: 10-40% (depende da rocha e do fluido)\n• Abaixo de Swi: k_ro = k_ro_max (máxima permeabilidade relativa ao óleo)\n• Acima de Swi: k_ro diminui à medida que mais água entra\n\nDeterminação:\n• Curvas de pressão capilar (laboratório)\n• Perfis de poço (resistividade + Archie)\n• Testes de produção\n\nRelevância:\n• Define o óleo inicialmente no lugar: VOPL ∝ (1 − Swi)\n• Influencia a eficiência de recuperação" },
+  { id:"c11", categoria:"Conceitos", frente:"Saturação de Óleo Residual (Sor) — Alvo do EOR", verso:"Saturação de óleo que permanece no reservatório após varredura por água (waterflood):\n\n• Sor típico: 20-40% (óleo preso por forças capilares em poros menores)\n• Alvo dos métodos EOR: mobilizar esse óleo residual\n\nMetodologias EOR para reduzir Sor:\n• Surfactante: reduz tensão interfacial (γ) → óleo se move\n• CO₂ miscível: dissolve no óleo, reduz viscosidade e tensão superficial\n• Injeção de vapor: reduz viscosidade de óleos pesados\n• Polímero: melhora varredura (reduz Sor indiretamente)\n\nPotencial EOR no Brasil:\n• Petrobras estima >30 bilhões de barris de óleo residual nos campos maduros de Campos." },
+  { id:"c12", categoria:"Conceitos", frente:"Análise de Horner (Pressure Buildup)", verso:"Método de interpretação de testes de pressão (buildup) para determinar propriedades do reservatório:\n\nGráfico de Horner:\n• Eixo X (log): (tp + Δt) / Δt, onde tp = tempo de produção, Δt = tempo fechado\n• Eixo Y (linear): pressão P_ws\n• Reta de Horner: inclinação m → permeabilidade k\n\nEquações:\n• k = 162,6 × q × μ × B / (m × h)\n• Skin: S = 1,1513 × [(P_1h − Pwf) / m − log(k/φμct_rw²) + 3,2275]\n• Extrapolação para (tp+Δt)/Δt → 1: pressão média P*\n\nLimites identificados: barreiras de pressão (dobramento da reta), aquífero ativo." },
+  { id:"c13", categoria:"Conceitos", frente:"Wellbore Storage (Armazenamento do Poço)", verso:"Efeito que distorce o início de testes de pressão (buildup e drawdown):\n\nCausa:\n• Após fechar o poço, fluido no interior do revestimento continua a comprimir ou expandir\n• O poço 'vê' pressão do fluido interno, não do reservatório\n• Mascara o sinal do reservatório no início do teste\n\nPeríodo afetado: primeira fase do buildup (diagonal de 45° no log-log)\n\nÍndice de Wellbore Storage:\nC = V_poço × c_fluido (bbl/psi)\n\nIdentificação:\n• Gráfico log-log: derivada e ΔP se sobrepõem (unitslope)\n• Hump da derivada: sinal do skin\n• Platô da derivada: regime radial (onde se lê k e S)" },
+  { id:"c14", categoria:"Conceitos", frente:"Geosteering (Guiagem em Tempo Real)", verso:"Técnica de ajuste da trajetória de poços direcionais/horizontais com base em dados em tempo real da formação:\n\nObjetivo:\n• Manter o poço dentro da janela-alvo do reservatório\n• Maximizar o comprimento efetivo no intervalo de melhor qualidade\n\nFerramientas utilizadas:\n• LWD (Logging While Drilling): GR, resistividade azimuthal, densidade, imagem\n• MWD: inclinação e azimute\n• Sísmica de superfície (correlação com modelo geológico)\n\nDesafio: decidir em tempo real se o poço saiu do reservatório por:\n• Variação faciológica lateral\n• Falha não mapeada\n• Espessamento/adelgaçamento do reservatório" },
+  { id:"c15", categoria:"Conceitos", frente:"Fratura Hidráulica — Princípios", verso:"Técnica de estimulação que cria fraturas artificiais no reservatório para aumentar a produtividade:\n\nProcesso:\n• Injeção de fluido (water-frac ou gel) a pressão > P_fraturamento\n• Propagação da fratura no plano perpendicular à tensão mínima horizontal\n• Bombeamento de propante (areia, cerâmica ou bauxita) para manter a fratura aberta\n\nParâmetros:\n• Half-length (xf): comprimento da semiefratura (m)\n• Condutividade: k_fratura × apertura (mD·m)\n• Frações sem dimensões: Fcd = k_f × w / (k_matrix × xf)\n\nAplicação:\n• Shale gas/oil (multiple fracturing em poços horizontais)\n• Reservatórios de baixa permeabilidade (tight gas)" },
+  { id:"c16", categoria:"Conceitos", frente:"Coning de Água e Gás", verso:"Fenômeno indesejável em poços produtores:\n\nConing de água:\n• Depressão ao redor do poço atrai a interface óleo-água (COA)\n• O cone de água rompe (breakthrough) para o poço\n• Produção de água aumenta rapidamente\n\nConing de gás:\n• Análogo, mas com interface óleo-gás (COG)\n• Produção de gás da capa aumenta inesperadamente\n\nFatores que favorecem:\n• Altas vazões de produção\n• Grande anisotropia kv/kh\n• Pequena distância entre o intervalo produtor e o contato\n\nSoluções:\n• Reduzir vazão de produção\n• Completar o poço apenas na parte superior do reservatório\n• Barreira de gel (conformance)\n• Poço horizontal (reduz gradiente de pressão vertical)" },
+  { id:"c17", categoria:"Conceitos", frente:"Flow Assurance — Garantia de Escoamento", verso:"Disciplina que garante o escoamento contínuo e seguro dos fluidos do reservatório até a superfície:\n\nPrincipais ameaças:\n\n1. Hidratos de gás:\n• Formação em alta P e baixa T (linhas submarinas)\n• Prevenção: injeção de MEG/metanol, inibidores termodinâmicos, riser aquecido\n\n2. Parafinas (wax):\n• Deposição em T < WAT (Wax Appearance Temperature)\n• Prevenção: pigging, inibidores de parafina, aquecimento\n\n3. Asfaltenos:\n• Precipitação por mudança de pressão/temperatura/composição\n• Difícil de remover; usa-se dispersantes\n\n4. Incrustações (scale):\n• CaCO₃, BaSO₄, SrSO₄ — incompatibilidade de águas\n• Prevenção: inibidores de scale via umbilical" },
+  { id:"c18", categoria:"Conceitos", frente:"Petrofísica — Porosidade Primária vs. Secundária", verso:"Porosidade Primária:\n• Formada durante a deposição e litificação dos sedimentos\n• Intergranular (entre os grãos)\n• Intracristalina (dentro dos cristais)\n• Controlada pelo sorting, forma dos grãos e grau de cimentação\n• φ típico: 20-35% em arenitos bem selecionados\n\nPorosidade Secundária:\n• Criada por processos pós-deposicionais (diagênese)\n• Dissolução (vugular): água ácida dissolve carbonatos (poços cársticos)\n• Fraturamento tectônico: fraturas abertas\n• Dolomitização: substituição Ca→Mg cria espaço\n• Φ pode variar de < 5% a > 30%\n\nCarbonatos: dominância de porosidade secundária.\nArenitos: dominância de porosidade primária." },
+  { id:"c19", categoria:"Conceitos", frente:"Simulação Numérica de Reservatórios", verso:"Modelo matemático computacional que simula o comportamento do reservatório ao longo do tempo:\n\nTipos de modelos:\n• Black oil: 3 componentes (óleo, gás, água) — mais simples\n• Composicional: composição completa de HC — para EOR, condensados\n• Dual porosity: matriz + fraturas (reservatórios naturalmente fraturados)\n\nEquações resolvidas:\n• Balanço de massa para cada fase (continuidade + Darcy)\n• Equilíbrio termodinâmico de fases\n• Balanço de energia (modelos térmicos)\n\nSoftware: ECLIPSE (SLB), CMG-GEM/STARS, Intersect, IMEX\n\nUso: previsão de produção, otimização de injeção, history matching, estratégia de desenvolvimento." },
+  { id:"c20", categoria:"Conceitos", frente:"Equilíbrio de Fases — Diagramas P-T", verso:"Diagrama de fases P-T para sistemas de hidrocarbonetos:\n\nZonas:\n• Região de única fase líquida: P > Pdew, T < Tc (alto P, baixa T)\n• Região de única fase gasosa: P < Psat, T > Tc\n• Envelope bifásico: região entre a curva de bolha e a curva de orvalho\n\nPontos chave:\n• Ponto crítico: T_c e P_c — líquido e gás têm mesma densidade\n• Cricondentérmico: temperatura máxima do envelope bifásico\n• Cricondenbárico: pressão máxima do envelope bifásico\n\nFluidos:\n• Óleo volátil: ponto de operação próximo ao crítico\n• Condensado retrograde: ponto de orvalho (liquefaz com queda de P)\n• Gás seco: sempre fora do envelope nas T de operação" },
+  { id:"c21", categoria:"Conceitos", frente:"Anisotropia de Permeabilidade (kv/kh)", verso:"Relação entre permeabilidade vertical (kv) e horizontal (kh):\n\nCausa:\n• Sedimentação em camadas horizontais cria preferência de fluxo lateral\n• kv < kh em quase todos os reservatórios clásticos\n\nValores típicos:\n• kv/kh = 0,1 a 0,01 (frequentemente 1:10 ou menos)\n• Arenitos com argilas laminadas: kv/kh < 0,01\n• Reservatórios fraturados verticalmente: kv/kh >> 1\n\nEfeitos:\n• kv/kh baixo → facilita coning (reduz drenagem vertical)\n• kv/kh baixo → poços horizontais não interceptam verticalmente\n• Importante para design de completação e simulação\n\nMedição: testes de poço com packer, análises de plug vertical em laboratório." },
+  { id:"c22", categoria:"Conceitos", frente:"Módulo de Young, Poisson e Mecânica de Rochas", verso:"Módulo de Young (E):\n• E = σ/ε — rigidez do material (GPa)\n• Rochas: E = 10-100 GPa\n• Arenitos: 10-50 GPa; carbonatos: 30-100 GPa\n\nCoeficiente de Poisson (ν):\n• ν = −ε_transversal / ε_axial\n• Rochas: ν ≈ 0,1-0,4\n• ν = 0,5: fluido incompressível\n\nAplicações em petróleo:\n• Cálculo de tensões in situ (σ_h = ν/(1−ν) × σ_v + pressão tectônica)\n• Design de fraturamento hidráulico\n• Estabilidade de poços (janela de lama)\n• Compactação de reservatório (subsidence)\n\nMedição: ensaios triaxiais em laboratório ou perfis sônicos (E_dinâmico)." },
+  { id:"c23", categoria:"Conceitos", frente:"Contratos de E&P no Brasil — Concessão vs. Partilha", verso:"Concessão (Lei 9.478/1997):\n• Operador assume risco exploratório\n• Paga: bônus de assinatura + royalties (5-15%) + participação especial\n• Retém a propriedade do petróleo produzido (menos encargos)\n• Modelo dominante nas rodadas 1-11 da ANP (1999-2013)\n\nPartilha de Produção (Lei 12.351/2010):\n• Adotada para o pré-sal e áreas estratégicas\n• Petrobras: operadora obrigatória com mínimo 30%\n• Divisão: cost oil (recuperação de custos) + profit oil (dividido entre concessionário e União via PPSA)\n• Estado maximiza receita em descobertas rentáveis\n\nCessão Onerosa (Lei 12.276/2010):\n• Contrato especial para 5 bilhões de barris do pré-sal entre Petrobras e União." },
+  { id:"c24", categoria:"Conceitos", frente:"Métodos de Análise Sísmica — 3D e 4D", verso:"Sísmica 3D:\n• Levantamento volumétrico que cobre área em todas as direções\n• Gera cubo sísmico (inline, crossline, time slices)\n• Fundamental para mapeamento estrutural e estratigráfico\n• Resolução vertical: λ/4 ≈ 10-40 m (depende da frequência e velocidade)\n\nSísmica 4D (4D = 3D repetida no tempo):\n• Mesmo levantamento 3D repetido após anos de produção\n• Diferença entre levantamentos: variação de impedância acústica por mudança de fluido\n• Aplicações:\n  - Monitorar avanço de frentes de água/gás\n  - Identificar compartimentações não previstas\n  - Otimizar posicionamento de poços injetores/produtores\n• Pioneira: campo de Gullfaks (Noruega, 1995)" },
+  { id:"c25", categoria:"Conceitos", frente:"Geomecânica de Reservatório — Compactação e Subsidência", verso:"Compactação do reservatório:\n• Redução do volume de poros com o declínio de pressão\n• Causada pela transferência de carga dos fluidos para a rocha\n• Pode contribuir para a produção (drive compactacional)\n• Maior em reservatórios de calcários e arenitos frouxos (ex: Ekofisk, North Sea)\n\nSubsidência:\n• Afundamento do fundo oceânico ou da superfície terrestre acima do reservatório\n• Consequências:\n  - Danos a equipamentos submarinos e risers\n  - Inundação costeira (ex: subsidência de Ekofisk: 9m em 40 anos)\n  - Necessidade de levantamento de plataformas\n\nMonitoramento: GPS, InSAR (satélite), markers de compactação em poços\n\nGerenciamento: injeção de água para manutenção de pressão minimiza compactação." },
+  { id:"c26", categoria:"Conceitos", frente:"Teste de Pressão — Drawdown e Buildup", verso:"Drawdown test:\n• Poço aberto para produção a vazão constante\n• Pressão de fundo declina com o tempo\n• Análise: log-log de ΔP e derivada → identifica regime de fluxo\n\nRegimes de fluxo (sequência temporal):\n1. Wellbore storage: unitslope (ΔP ∝ t)\n2. Fluxo radial: derivada plana → permeabilidade k e skin S\n3. Fluxo em canal (linear): derivada com inclinação 1/2\n4. Pseudoestacionário: queda de pressão constante → volume de dreno\n5. Limite: barreira → derivada sobe (duplica)\n\nBuildup test:\n• Poço fechado — pressão se recupera\n• Análise de Horner → P*, k, S\n• Mais preciso que drawdown (vazão constante garantida)" },
+  { id:"c27", categoria:"Conceitos", frente:"Diagênese e Qualidade do Reservatório", verso:"Diagênese: conjunto de processos físicos e químicos que alteram sedimentos após deposição:\n\nProcessos que REDUZEM qualidade:\n• Compactação mecânica: reduz porosidade primária com soterramento\n• Cimentação: quartzo, calcita, argilomineral preenchem poros\n• Argilização: alteração de feldspatos em argilominerais (ilita, caulinita)\n\nProcessos que AUMENTAM qualidade:\n• Dissolução: óxidos, feldspatos e carbonatos se dissolvem (chuvas ácidas diagenéticas)\n• Dolomitização: substituição de calcita por dolomita (redução de volume)\n• Fraturamento: tensões tectônicas criam fraturas abertas\n\nDiagênese controla a distribuição de porosidade e permeabilidade no reservatório — determinante para o FES (Fator de Engorda do Reservatório)." },
+  { id:"c28", categoria:"Conceitos", frente:"Integridade de Poço (Well Integrity)", verso:"Conjunto de barreiras e práticas que garantem a contenção dos fluidos do reservatório ao longo da vida do poço:\n\nBarreiras primárias:\n• Colunas de revestimento cimentadas (anular)\n• Equipamentos de segurança de poço (SCSSV, PSV)\n• Fluido de perfuração e completação (pressão hidrostática)\n\nBarreiras secundárias:\n• BOP (durante perfuração)\n• ANM/Árvore de Natal (produção)\n• Cimento no espaço anular externo\n\nRiscos de falha:\n• Vazamento de cimento → comunicação entre formações\n• Corrosão dos tubulares\n• Canhoneamento inadequado\n\nNorma de referência: NORSOK D-010 (integridade de poço)\nLição: Macondo/BP Deepwater Horizon (2010) — falha de múltiplas barreiras" },
+  { id:"c29", categoria:"Conceitos", frente:"Estimativa de Reservas (1P, 2P, 3P)", verso:"Classificação de reservas pela probabilidade de recuperação:\n\n• 1P (Proved, P90): reservas provadas com 90% de probabilidade de serem iguais ou maiores\n  - Desenvolvidas: produção já iniciada ou infraestrutura instalada\n  - Subdesenvolvidas: aprovadas para desenvolvimento futuro\n\n• 2P (P50): melhor estimativa — inclui 1P + reservas prováveis\n  - 50% de chance de ser igual ou maior\n\n• 3P (P10): inclui 1P + 2P + reservas possíveis\n  - 10% de chance de ser igual ou maior\n\nRecursos:\n• Contingente: descobertos mas não aprovados para desenvolvimento\n• Prospectivo: não descobertos (expectativa estatística)\n\nPadrão: SPE-PRMS (Society of Petroleum Engineers — Petroleum Resources Management System)" },
+  { id:"c30", categoria:"Conceitos", frente:"Pressão Anormal — Sobrepressão e Subpressão", verso:"Pressão Normal:\n• Gradiente hidrostático de água salgada ≈ 10,5 kPa/m (0,46 psi/ft)\n\nSobrepressão (Geopressão):\n• Pressão de poros > pressão hidrostática normal\n• Causas:\n  - Compactação insuficiente (shale undercompaction)\n  - Geração rápida de HC em rochas lacradas\n  - Aquecimento de fluidos confinados\n  - Tectônica (falhas selos)\n• Risco: kick e blowout se lama subestimada\n\nSubpressão:\n• Pressão de poros < pressão hidrostática\n• Causas: depleção por produção, erosão da coluna sobrejacente\n• Risco: perda de circulação em reservatórios depletados\n\nMapeamento: análise de velocidade sísmica, perfis de sônico/densidade." },
+];
 
 const BLOCOS = {
   "II": { nome: "Petróleo", cor: "#0f4c81", fundo: "#e8f0f7" },
@@ -845,9 +1148,14 @@ const BLOCOS = {
 };
 
 export default function QuizPetrobras() {
+  // ── MODO ──────────────────────────────────────────────────
+  const [modo, setModo] = useState("quiz"); // "quiz" | "flashcard"
+
+  // ── QUIZ STATE ────────────────────────────────────────────
   const [tela, setTela] = useState("menu");
   const [filtroBloco, setFiltroBloco] = useState("TODOS");
   const [filtroAssunto, setFiltroAssunto] = useState("TODOS");
+  const [filtroFonte, setFiltroFonte] = useState("simulado"); // "simulado" | "prova_real"
   const [modoRevisao, setModoRevisao] = useState(false);
   const [questoes, setQuestoes] = useState([]);
   const [idx, setIdx] = useState(0);
@@ -861,6 +1169,17 @@ export default function QuizPetrobras() {
   const [sessaoAcertos, setSessaoAcertos] = useState(0);
   const [sessaoTotal, setSessaoTotal] = useState(0);
   const [novaQ, setNovaQ] = useState({ pergunta:"", opcoes:["","","",""], correta:0, bloco:"II", assunto:"", explicacao:"" });
+
+  // ── FLASHCARD STATE ────────────────────────────────────────
+  const [fcFiltroCategoria, setFcFiltroCategoria] = useState("TODOS");
+  const [fcQueue, setFcQueue] = useState([]);
+  const [fcIdx, setFcIdx] = useState(0);
+  const [fcRevelado, setFcRevelado] = useState(false);
+  const [fcProgresso, setFcProgresso] = useState(() => {
+    try { return JSON.parse(localStorage.getItem(FC_STORAGE_KEY)) || {}; } catch { return {}; }
+  });
+  const [fcSessaoStats, setFcSessaoStats] = useState({ naolembrei: 0, dificil: 0, facil: 0 });
+
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -877,15 +1196,22 @@ export default function QuizPetrobras() {
     setProgresso(p);
   }, []);
 
+  const salvarFcProgresso = useCallback((p) => {
+    localStorage.setItem(FC_STORAGE_KEY, JSON.stringify(p));
+    setFcProgresso(p);
+  }, []);
+
   const formatarTempo = (s) => {
     const m = Math.floor(s/60); const ss = s%60;
     return `${String(m).padStart(2,"0")}:${String(ss).padStart(2,"0")}`;
   };
 
+  // ── QUIZ ──────────────────────────────────────────────────
   const iniciarQuiz = () => {
-    let pool = modoRevisao
-      ? QUESTIONS_DB.filter(q => progresso[q.id] === "errada")
-      : QUESTIONS_DB;
+    let pool = filtroFonte === "prova_real"
+      ? QUESTIONS_DB.filter(q => q.fonte === "prova_real")
+      : QUESTIONS_DB.filter(q => !q.fonte || q.fonte !== "prova_real");
+    if (modoRevisao) pool = pool.filter(q => progresso[q.id] === "errada");
     if (filtroBloco !== "TODOS") pool = pool.filter(q => q.bloco === filtroBloco);
     if (filtroAssunto !== "TODOS") pool = pool.filter(q => q.assunto === filtroAssunto);
     const embaralhadas = [...pool].sort(() => Math.random() - 0.5);
@@ -894,6 +1220,50 @@ export default function QuizPetrobras() {
     setSessaoAcertos(0); setSessaoTotal(0);
     setTempo(0); setRodando(true);
     setTela("quiz");
+  };
+
+  // ── FLASHCARD ──────────────────────────────────────────────
+  const iniciarFlashcards = () => {
+    let pool = fcFiltroCategoria === "TODOS"
+      ? FLASHCARDS_DB
+      : FLASHCARDS_DB.filter(f => f.categoria === fcFiltroCategoria);
+    // Repetição espaçada: prioridade = naolembrei*3 + dificil - facil
+    const sorted = [...pool].sort((a, b) => {
+      const pa = fcProgresso[a.id];
+      const pb = fcProgresso[b.id];
+      const sa = pa ? pa.naolembrei * 3 + pa.dificil - pa.facil : 1;
+      const sb = pb ? pb.naolembrei * 3 + pb.dificil - pb.facil : 1;
+      if (sb !== sa) return sb - sa;
+      return Math.random() - 0.5;
+    });
+    setFcQueue(sorted);
+    setFcIdx(0);
+    setFcRevelado(false);
+    setFcSessaoStats({ naolembrei: 0, dificil: 0, facil: 0 });
+    setTela("flashcard");
+  };
+
+  const avaliarCard = (rating) => {
+    const card = fcQueue[fcIdx];
+    const prev = fcProgresso[card.id] || { naolembrei: 0, dificil: 0, facil: 0, visto: 0 };
+    const np = {
+      ...fcProgresso,
+      [card.id]: {
+        ...prev,
+        visto: (prev.visto || 0) + 1,
+        naolembrei: prev.naolembrei + (rating === "naolembrei" ? 1 : 0),
+        dificil: prev.dificil + (rating === "dificil" ? 1 : 0),
+        facil: prev.facil + (rating === "facil" ? 1 : 0),
+      }
+    };
+    salvarFcProgresso(np);
+    setFcSessaoStats(s => ({ ...s, [rating]: s[rating] + 1 }));
+    if (fcIdx + 1 >= fcQueue.length) {
+      setTela("fc_resultado");
+    } else {
+      setFcIdx(i => i + 1);
+      setFcRevelado(false);
+    }
   };
 
   const responder = (i) => {
@@ -920,18 +1290,29 @@ export default function QuizPetrobras() {
     alert(`Questão #${id} adicionada com sucesso!`);
   };
 
+  const poolAtual = filtroFonte === "prova_real"
+    ? QUESTIONS_DB.filter(q => q.fonte === "prova_real")
+    : QUESTIONS_DB.filter(q => !q.fonte || q.fonte !== "prova_real");
+
   const assuntos = [...new Set(
-    (filtroBloco === "TODOS" ? QUESTIONS_DB : QUESTIONS_DB.filter(q=>q.bloco===filtroBloco))
+    (filtroBloco === "TODOS" ? poolAtual : poolAtual.filter(q=>q.bloco===filtroBloco))
     .map(q=>q.assunto)
   )].sort();
+
+  const simuladoQs = QUESTIONS_DB.filter(q => !q.fonte || q.fonte !== "prova_real");
+  const provaRealQs = QUESTIONS_DB.filter(q => q.fonte === "prova_real");
 
   const totalCertas = Object.values(progresso).filter(v=>v==="certa").length;
   const totalErradas = Object.values(progresso).filter(v=>v==="errada").length;
   const totalRespondidas = totalCertas + totalErradas;
   const pct = totalRespondidas > 0 ? Math.round(totalCertas/totalRespondidas*100) : 0;
 
+  const fcTotalCards = FLASHCARDS_DB.length;
+  const fcTotalVisto = Object.keys(fcProgresso).length;
+
   const q = questoes[idx];
   const bInfo = q ? BLOCOS[q.bloco] : null;
+  const fcCard = fcQueue[fcIdx];
 
   // ── MENU ──────────────────────────────────────────────
   if (tela === "menu") return (
@@ -939,120 +1320,339 @@ export default function QuizPetrobras() {
       <div style={{ maxWidth:740, margin:"0 auto" }}>
 
         {/* Header */}
-        <div style={{ textAlign:"center", marginBottom:28 }}>
+        <div style={{ textAlign:"center", marginBottom:20 }}>
           <div style={{ fontSize:13, color:"#4a9eff", letterSpacing:4, fontFamily:"monospace", marginBottom:8 }}>
             PETROBRAS · ÊNFASE 16
           </div>
-          <h1 style={{ fontSize:28, color:"#fff", margin:0, fontWeight:700 }}>
-            SISTEMA DE QUIZ
-          </h1>
-          <div style={{ fontSize:13, color:"#8a9bb5", marginTop:6 }}>
-            200 questões · Padrão Cesgranrio · Engenharia de Petróleo
-          </div>
+          <h1 style={{ fontSize:28, color:"#fff", margin:0, fontWeight:700 }}>SISTEMA DE ESTUDOS</h1>
+          <div style={{ fontSize:13, color:"#8a9bb5", marginTop:6 }}>Padrão Cesgranrio · Engenharia de Petróleo</div>
         </div>
 
-        {/* Stats gerais */}
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:10, marginBottom:24 }}>
-          {[
-            ["RESPONDIDAS", totalRespondidas, "#4a9eff"],
-            ["CERTAS", totalCertas, "#22c55e"],
-            ["ERRADAS", totalErradas, "#ef4444"],
-            ["APROVEIT.", pct + "%", pct >= 60 ? "#22c55e" : pct >= 40 ? "#f59e0b" : "#ef4444"],
-          ].map(([l,v,c]) => (
-            <div key={l} style={{ background:"#111d30", borderRadius:10, padding:"14px 8px", textAlign:"center", border:`1px solid #1e3050` }}>
-              <div style={{ fontSize:20, fontWeight:700, color:c }}>{v}</div>
-              <div style={{ fontSize:10, color:"#5a7a9a", letterSpacing:1, marginTop:3 }}>{l}</div>
-            </div>
+        {/* Toggle QUIZ / FLASHCARD */}
+        <div style={{ display:"flex", background:"#111d30", borderRadius:14, padding:6, marginBottom:20, border:"1px solid #1e3050", gap:6 }}>
+          {[["quiz","📝 MODO QUIZ"],["flashcard","🃏 MODO FLASHCARD"]].map(([m, label]) => (
+            <button key={m} onClick={() => setModo(m)}
+              style={{ flex:1, padding:"13px", borderRadius:10, border:"none", cursor:"pointer", fontSize:14, fontWeight:700,
+                background: modo === m ? "linear-gradient(135deg, #1a5fa8, #4a9eff)" : "transparent",
+                color: modo === m ? "#fff" : "#5a7a9a", transition:"all .2s" }}>
+              {label}
+            </button>
           ))}
         </div>
 
-        {/* Filtros */}
-        <div style={{ background:"#111d30", borderRadius:14, padding:20, marginBottom:20, border:"1px solid #1e3050" }}>
-          <div style={{ color:"#8a9bb5", fontSize:12, letterSpacing:2, marginBottom:14 }}>⚙️ FILTROS</div>
+        {modo === "quiz" ? (<>
+          {/* Stats */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:10, marginBottom:20 }}>
+            {[["RESPONDIDAS",totalRespondidas,"#4a9eff"],["CERTAS",totalCertas,"#22c55e"],["ERRADAS",totalErradas,"#ef4444"],
+              ["APROVEIT.",pct+"%",pct>=60?"#22c55e":pct>=40?"#f59e0b":"#ef4444"]].map(([l,v,c]) => (
+              <div key={l} style={{ background:"#111d30", borderRadius:10, padding:"14px 8px", textAlign:"center", border:"1px solid #1e3050" }}>
+                <div style={{ fontSize:20, fontWeight:700, color:c }}>{v}</div>
+                <div style={{ fontSize:10, color:"#5a7a9a", letterSpacing:1, marginTop:3 }}>{l}</div>
+              </div>
+            ))}
+          </div>
 
-          <div style={{ marginBottom:14 }}>
-            <div style={{ color:"#cdd7e5", fontSize:13, marginBottom:8 }}>Bloco</div>
-            <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
-              {["TODOS", "II", "I", "Mat", "III"].map(b => (
-                <button key={b} onClick={() => { setFiltroBloco(b); setFiltroAssunto("TODOS"); }}
-                  style={{ padding:"7px 14px", borderRadius:20, border:"none", cursor:"pointer", fontSize:12, fontWeight:600,
-                    background: filtroBloco===b ? "#4a9eff" : "#1e3050",
-                    color: filtroBloco===b ? "#fff" : "#8a9bb5" }}>
-                  {b === "TODOS" ? "Todos" : `Bloco ${b} · ${BLOCOS[b]?.nome || b}`}
+          {/* Filtros */}
+          <div style={{ background:"#111d30", borderRadius:14, padding:20, marginBottom:20, border:"1px solid #1e3050" }}>
+            <div style={{ color:"#8a9bb5", fontSize:12, letterSpacing:2, marginBottom:14 }}>⚙️ FILTROS</div>
+
+            {/* Fonte */}
+            <div style={{ marginBottom:14 }}>
+              <div style={{ color:"#cdd7e5", fontSize:13, marginBottom:8 }}>Banco de Questões</div>
+              <div style={{ display:"flex", gap:8 }}>
+                <button onClick={() => { setFiltroFonte("simulado"); setFiltroBloco("TODOS"); setFiltroAssunto("TODOS"); }}
+                  style={{ flex:1, padding:"10px 8px", borderRadius:8, border:"none", cursor:"pointer", fontSize:12, fontWeight:600,
+                    background: filtroFonte==="simulado" ? "#1a5fa8" : "#1e3050",
+                    color: filtroFonte==="simulado" ? "#fff" : "#8a9bb5" }}>
+                  📚 Simulado ({simuladoQs.length})
                 </button>
-              ))}
+                <button onClick={() => { setFiltroFonte("prova_real"); setFiltroBloco("TODOS"); setFiltroAssunto("TODOS"); }}
+                  style={{ flex:1, padding:"10px 8px", borderRadius:8, border:"none", cursor:"pointer", fontSize:12, fontWeight:600,
+                    background: filtroFonte==="prova_real" ? "#d97706" : "#1e3050",
+                    color: filtroFonte==="prova_real" ? "#fff" : "#8a9bb5" }}>
+                  🏆 Provas Reais ({provaRealQs.length})
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div style={{ marginBottom:14 }}>
-            <div style={{ color:"#cdd7e5", fontSize:13, marginBottom:8 }}>Assunto</div>
-            <select value={filtroAssunto} onChange={e => setFiltroAssunto(e.target.value)}
-              style={{ width:"100%", padding:"9px 12px", borderRadius:8, background:"#1e3050", border:"1px solid #2e4570", color:"#cdd7e5", fontSize:13 }}>
-              <option value="TODOS">Todos os assuntos</option>
-              {assuntos.map(a => <option key={a} value={a}>{a}</option>)}
-            </select>
-          </div>
+            {/* Bloco */}
+            <div style={{ marginBottom:14 }}>
+              <div style={{ color:"#cdd7e5", fontSize:13, marginBottom:8 }}>Bloco</div>
+              <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
+                {["TODOS","II","I","Mat","III"].map(b => (
+                  <button key={b} onClick={() => { setFiltroBloco(b); setFiltroAssunto("TODOS"); }}
+                    style={{ padding:"7px 14px", borderRadius:20, border:"none", cursor:"pointer", fontSize:12, fontWeight:600,
+                      background: filtroBloco===b ? "#4a9eff" : "#1e3050",
+                      color: filtroBloco===b ? "#fff" : "#8a9bb5" }}>
+                    {b==="TODOS" ? "Todos" : `Bloco ${b} · ${BLOCOS[b]?.nome||b}`}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-          <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+            {/* Assunto */}
+            <div style={{ marginBottom:14 }}>
+              <div style={{ color:"#cdd7e5", fontSize:13, marginBottom:8 }}>Assunto</div>
+              <select value={filtroAssunto} onChange={e => setFiltroAssunto(e.target.value)}
+                style={{ width:"100%", padding:"9px 12px", borderRadius:8, background:"#1e3050", border:"1px solid #2e4570", color:"#cdd7e5", fontSize:13 }}>
+                <option value="TODOS">Todos os assuntos</option>
+                {assuntos.map(a => <option key={a} value={a}>{a}</option>)}
+              </select>
+            </div>
+
+            {/* Modo Revisão */}
             <label style={{ display:"flex", alignItems:"center", gap:8, cursor:"pointer", userSelect:"none" }}>
               <div onClick={() => setModoRevisao(!modoRevisao)}
-                style={{ width:40, height:22, borderRadius:11, background: modoRevisao ? "#ef4444" : "#1e3050",
-                  position:"relative", transition:"background .2s", cursor:"pointer", border:"1px solid #2e4570" }}>
-                <div style={{ position:"absolute", top:2, left: modoRevisao ? 19 : 2, width:16, height:16,
+                style={{ width:40, height:22, borderRadius:11, background: modoRevisao?"#ef4444":"#1e3050",
+                  position:"relative", transition:"background .2s", cursor:"pointer", border:"1px solid #2e4570", flexShrink:0 }}>
+                <div style={{ position:"absolute", top:2, left: modoRevisao?19:2, width:16, height:16,
                   borderRadius:"50%", background:"#fff", transition:"left .2s" }} />
               </div>
               <span style={{ color:"#cdd7e5", fontSize:13 }}>Modo Revisão — só questões erradas ({totalErradas})</span>
             </label>
           </div>
-        </div>
 
-        {/* Contagem */}
-        <div style={{ textAlign:"center", color:"#5a7a9a", fontSize:13, marginBottom:16 }}>
-          {(() => {
-            let pool = modoRevisao ? QUESTIONS_DB.filter(q=>progresso[q.id]==="errada") : QUESTIONS_DB;
-            if (filtroBloco !== "TODOS") pool = pool.filter(q=>q.bloco===filtroBloco);
-            if (filtroAssunto !== "TODOS") pool = pool.filter(q=>q.assunto===filtroAssunto);
-            return `${pool.length} questões na seleção atual`;
-          })()}
-        </div>
+          {/* Contagem */}
+          <div style={{ textAlign:"center", color:"#5a7a9a", fontSize:13, marginBottom:16 }}>
+            {(() => {
+              let pool = filtroFonte==="prova_real"
+                ? QUESTIONS_DB.filter(q=>q.fonte==="prova_real")
+                : QUESTIONS_DB.filter(q=>!q.fonte||q.fonte!=="prova_real");
+              if (modoRevisao) pool = pool.filter(q=>progresso[q.id]==="errada");
+              if (filtroBloco!=="TODOS") pool = pool.filter(q=>q.bloco===filtroBloco);
+              if (filtroAssunto!=="TODOS") pool = pool.filter(q=>q.assunto===filtroAssunto);
+              return `${pool.length} questões na seleção atual`;
+            })()}
+          </div>
 
-        {/* Botões principais */}
-        <div style={{ display:"flex", gap:12, marginBottom:20 }}>
-          <button onClick={iniciarQuiz}
-            style={{ flex:1, padding:"16px", borderRadius:12, border:"none", cursor:"pointer",
-              background:"linear-gradient(135deg, #1a5fa8, #4a9eff)", color:"#fff", fontSize:16, fontWeight:700, letterSpacing:1 }}>
-            ▶ INICIAR QUIZ
-          </button>
-          <button onClick={() => setTela("adicionar")}
-            style={{ padding:"16px 20px", borderRadius:12, border:"1px solid #2e4570", cursor:"pointer",
-              background:"#111d30", color:"#4a9eff", fontSize:13, fontWeight:600 }}>
-            + Adicionar Questão
-          </button>
-        </div>
+          {/* Botões principais */}
+          <div style={{ display:"flex", gap:12, marginBottom:20 }}>
+            <button onClick={iniciarQuiz}
+              style={{ flex:1, padding:"16px", borderRadius:12, border:"none", cursor:"pointer",
+                background:"linear-gradient(135deg, #1a5fa8, #4a9eff)", color:"#fff", fontSize:16, fontWeight:700, letterSpacing:1 }}>
+              ▶ INICIAR QUIZ
+            </button>
+            <button onClick={() => setTela("adicionar")}
+              style={{ padding:"16px 20px", borderRadius:12, border:"1px solid #2e4570", cursor:"pointer",
+                background:"#111d30", color:"#4a9eff", fontSize:13, fontWeight:600 }}>
+              + Adicionar
+            </button>
+          </div>
 
-        {/* Distribuição por bloco */}
-        <div style={{ background:"#111d30", borderRadius:14, padding:20, border:"1px solid #1e3050" }}>
-          <div style={{ color:"#8a9bb5", fontSize:12, letterSpacing:2, marginBottom:14 }}>📊 DISTRIBUIÇÃO</div>
-          {Object.entries(BLOCOS).map(([bloco, info]) => {
-            const total = QUESTIONS_DB.filter(q=>q.bloco===bloco).length;
-            const certas = QUESTIONS_DB.filter(q=>q.bloco===bloco && progresso[q.id]==="certa").length;
-            const p = Math.round(certas/total*100);
-            return (
-              <div key={bloco} style={{ marginBottom:12 }}>
-                <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
-                  <span style={{ color:"#cdd7e5", fontSize:13 }}>Bloco {bloco} — {info.nome}</span>
-                  <span style={{ color:"#8a9bb5", fontSize:12 }}>{certas}/{total} ({p}%)</span>
+          {/* Distribuição */}
+          <div style={{ background:"#111d30", borderRadius:14, padding:20, border:"1px solid #1e3050" }}>
+            <div style={{ color:"#8a9bb5", fontSize:12, letterSpacing:2, marginBottom:14 }}>📊 DISTRIBUIÇÃO</div>
+            {Object.entries(BLOCOS).map(([bloco, info]) => {
+              const total = QUESTIONS_DB.filter(q=>q.bloco===bloco).length;
+              const certas = QUESTIONS_DB.filter(q=>q.bloco===bloco && progresso[q.id]==="certa").length;
+              const p = total>0 ? Math.round(certas/total*100) : 0;
+              return (
+                <div key={bloco} style={{ marginBottom:12 }}>
+                  <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
+                    <span style={{ color:"#cdd7e5", fontSize:13 }}>Bloco {bloco} — {info.nome}</span>
+                    <span style={{ color:"#8a9bb5", fontSize:12 }}>{certas}/{total} ({p}%)</span>
+                  </div>
+                  <div style={{ height:6, borderRadius:3, background:"#1e3050", overflow:"hidden" }}>
+                    <div style={{ width:`${p}%`, height:"100%", background:info.cor, borderRadius:3, transition:"width .5s" }} />
+                  </div>
                 </div>
-                <div style={{ height:6, borderRadius:3, background:"#1e3050", overflow:"hidden" }}>
-                  <div style={{ width:`${p}%`, height:"100%", background:info.cor, borderRadius:3, transition:"width .5s" }} />
-                </div>
+              );
+            })}
+          </div>
+        </>) : (<>
+          {/* FLASHCARD MODE */}
+          {/* Stats FC */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:10, marginBottom:20 }}>
+            {[["CARTÕES",fcTotalCards,"#4a9eff"],["VISTOS",fcTotalVisto,"#22c55e"],["RESTANTES",fcTotalCards-fcTotalVisto,"#f59e0b"]].map(([l,v,c]) => (
+              <div key={l} style={{ background:"#111d30", borderRadius:10, padding:"14px 8px", textAlign:"center", border:"1px solid #1e3050" }}>
+                <div style={{ fontSize:20, fontWeight:700, color:c }}>{v}</div>
+                <div style={{ fontSize:10, color:"#5a7a9a", letterSpacing:1, marginTop:3 }}>{l}</div>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+
+          {/* Categoria */}
+          <div style={{ background:"#111d30", borderRadius:14, padding:20, marginBottom:20, border:"1px solid #1e3050" }}>
+            <div style={{ color:"#8a9bb5", fontSize:12, letterSpacing:2, marginBottom:14 }}>🃏 CATEGORIA</div>
+            <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
+              {["TODOS","Fórmulas","Siglas","Conceitos"].map(cat => {
+                const count = cat==="TODOS" ? FLASHCARDS_DB.length : FLASHCARDS_DB.filter(f=>f.categoria===cat).length;
+                return (
+                  <button key={cat} onClick={() => setFcFiltroCategoria(cat)}
+                    style={{ padding:"8px 16px", borderRadius:20, border:"none", cursor:"pointer", fontSize:13, fontWeight:600,
+                      background: fcFiltroCategoria===cat ? "#4a9eff" : "#1e3050",
+                      color: fcFiltroCategoria===cat ? "#fff" : "#8a9bb5" }}>
+                    {cat} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Progresso por categoria */}
+          <div style={{ background:"#111d30", borderRadius:14, padding:20, marginBottom:20, border:"1px solid #1e3050" }}>
+            <div style={{ color:"#8a9bb5", fontSize:12, letterSpacing:2, marginBottom:14 }}>📈 PROGRESSO</div>
+            {["Fórmulas","Siglas","Conceitos"].map(cat => {
+              const cards = FLASHCARDS_DB.filter(f=>f.categoria===cat);
+              const vistos = cards.filter(f=>fcProgresso[f.id]).length;
+              const dominados = cards.filter(f=>{ const p=fcProgresso[f.id]; return p && p.facil > p.naolembrei; }).length;
+              const pctV = Math.round(vistos/cards.length*100);
+              const cor = cat==="Fórmulas"?"#4a9eff":cat==="Siglas"?"#22c55e":"#f59e0b";
+              return (
+                <div key={cat} style={{ marginBottom:12 }}>
+                  <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
+                    <span style={{ color:"#cdd7e5", fontSize:13 }}>{cat} ({cards.length})</span>
+                    <span style={{ color:"#8a9bb5", fontSize:12 }}>{vistos} vistos · {dominados} dominados</span>
+                  </div>
+                  <div style={{ height:6, borderRadius:3, background:"#1e3050", overflow:"hidden" }}>
+                    <div style={{ width:`${pctV}%`, height:"100%", background:cor, borderRadius:3, transition:"width .5s" }} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <button onClick={iniciarFlashcards}
+            style={{ width:"100%", padding:"16px", borderRadius:12, border:"none", cursor:"pointer",
+              background:"linear-gradient(135deg, #0f4c81, #4a9eff)", color:"#fff", fontSize:16, fontWeight:700, letterSpacing:1 }}>
+            🃏 INICIAR FLASHCARDS
+          </button>
+        </>)}
       </div>
     </div>
   );
+
+  // ── FLASHCARD ──────────────────────────────────────────────
+  if (tela === "flashcard" && fcCard) {
+    const fcTotal = fcQueue.length;
+    const fcProg = fcProgresso[fcCard.id] || { naolembrei:0, dificil:0, facil:0, visto:0 };
+    const catCor = fcCard.categoria==="Fórmulas"?"#4a9eff":fcCard.categoria==="Siglas"?"#22c55e":"#f59e0b";
+    return (
+      <div style={{ minHeight:"100vh", background:"#0a1628", fontFamily:"'Georgia', serif", padding:"16px" }}>
+        <div style={{ maxWidth:740, margin:"0 auto" }}>
+          {/* Barra superior */}
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:16 }}>
+            <button onClick={() => { setTela("menu"); setModo("flashcard"); }}
+              style={{ background:"none", border:"1px solid #2e4570", color:"#8a9bb5", borderRadius:8, padding:"6px 14px", cursor:"pointer", fontSize:13 }}>
+              ← Menu
+            </button>
+            <span style={{ color:"#8a9bb5", fontSize:13 }}>{fcIdx+1} / {fcTotal}</span>
+            <div style={{ display:"flex", gap:10, fontSize:12 }}>
+              <span style={{ color:"#22c55e" }}>✓ {fcSessaoStats.facil}</span>
+              <span style={{ color:"#f59e0b" }}>~ {fcSessaoStats.dificil}</span>
+              <span style={{ color:"#ef4444" }}>✗ {fcSessaoStats.naolembrei}</span>
+            </div>
+          </div>
+
+          {/* Barra de progresso */}
+          <div style={{ height:4, borderRadius:2, background:"#1e3050", marginBottom:20 }}>
+            <div style={{ width:`${(fcIdx/fcTotal)*100}%`, height:"100%", background:"#4a9eff", borderRadius:2, transition:"width .3s" }} />
+          </div>
+
+          {/* Card */}
+          <div style={{ background:"#111d30", borderRadius:20, padding:"32px 24px", marginBottom:16,
+            border:`2px solid ${catCor}40`, minHeight:280,
+            display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", textAlign:"center" }}>
+            <div style={{ marginBottom:16 }}>
+              <span style={{ background:catCor, color:"#fff", borderRadius:20, padding:"4px 16px", fontSize:11, fontWeight:700, letterSpacing:1 }}>
+                {fcCard.categoria.toUpperCase()}
+              </span>
+            </div>
+            <div style={{ color:"#e8eef5", fontSize:19, fontWeight:700, lineHeight:1.5 }}>
+              {fcCard.frente}
+            </div>
+            {fcRevelado && (
+              <div style={{ borderTop:`1px solid ${catCor}40`, paddingTop:20, marginTop:20, width:"100%", textAlign:"left" }}>
+                <div style={{ color:catCor, fontSize:11, fontWeight:700, marginBottom:10, letterSpacing:1 }}>RESPOSTA</div>
+                <div style={{ color:"#cdd7e5", fontSize:14, lineHeight:1.7, whiteSpace:"pre-line" }}>
+                  {fcCard.verso}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Histórico */}
+          {fcProg.visto > 0 && (
+            <div style={{ textAlign:"center", color:"#5a7a9a", fontSize:12, marginBottom:12 }}>
+              Visto {fcProg.visto}x · ✓{fcProg.facil} ~{fcProg.dificil} ✗{fcProg.naolembrei}
+            </div>
+          )}
+
+          {/* Botões */}
+          {!fcRevelado ? (
+            <button onClick={() => setFcRevelado(true)}
+              style={{ width:"100%", padding:"16px", borderRadius:12, border:"none", cursor:"pointer",
+                background:"linear-gradient(135deg, #1a5fa8, #4a9eff)", color:"#fff", fontSize:15, fontWeight:700 }}>
+              REVELAR RESPOSTA
+            </button>
+          ) : (
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:10 }}>
+              <button onClick={() => avaliarCard("naolembrei")}
+                style={{ padding:"14px 6px", borderRadius:12, border:"2px solid #ef4444", cursor:"pointer",
+                  background:"#200a0a", color:"#ef4444", fontSize:13, fontWeight:700 }}>
+                ✗ Não lembrei
+              </button>
+              <button onClick={() => avaliarCard("dificil")}
+                style={{ padding:"14px 6px", borderRadius:12, border:"2px solid #f59e0b", cursor:"pointer",
+                  background:"#201500", color:"#f59e0b", fontSize:13, fontWeight:700 }}>
+                ~ Com dificuldade
+              </button>
+              <button onClick={() => avaliarCard("facil")}
+                style={{ padding:"14px 6px", borderRadius:12, border:"2px solid #22c55e", cursor:"pointer",
+                  background:"#0a2010", color:"#22c55e", fontSize:13, fontWeight:700 }}>
+                ✓ Lembrei fácil
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // ── FC RESULTADO ──────────────────────────────────────────
+  if (tela === "fc_resultado") {
+    const total = fcQueue.length;
+    const { facil, dificil, naolembrei } = fcSessaoStats;
+    const pctFacil = total > 0 ? Math.round(facil/total*100) : 0;
+    return (
+      <div style={{ minHeight:"100vh", background:"#0a1628", fontFamily:"'Georgia', serif", padding:"24px 16px", display:"flex", alignItems:"center" }}>
+        <div style={{ maxWidth:500, margin:"0 auto", width:"100%", textAlign:"center" }}>
+          <div style={{ fontSize:56, marginBottom:16 }}>🃏</div>
+          <h2 style={{ color:"#fff", fontSize:26, marginBottom:8 }}>Sessão Concluída!</h2>
+          <div style={{ fontSize:44, fontWeight:700, color: pctFacil>=70?"#22c55e":pctFacil>=40?"#f59e0b":"#ef4444", marginBottom:16 }}>
+            {pctFacil}% dominado
+          </div>
+          <div style={{ background:"#111d30", borderRadius:14, padding:20, marginBottom:24, border:"1px solid #1e3050" }}>
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:12 }}>
+              {[["✓ Fácil",facil,"#22c55e"],["~ Dificuldade",dificil,"#f59e0b"],["✗ Não lembrei",naolembrei,"#ef4444"]].map(([l,v,c]) => (
+                <div key={l}>
+                  <div style={{ fontSize:24, fontWeight:700, color:c }}>{v}</div>
+                  <div style={{ fontSize:11, color:"#5a7a9a", marginTop:2 }}>{l}</div>
+                </div>
+              ))}
+            </div>
+            {naolembrei > 0 && (
+              <p style={{ color:"#cdd7e5", fontSize:13, marginTop:16, marginBottom:0, lineHeight:1.5 }}>
+                {naolembrei} cartão(ões) com "Não lembrei" terão prioridade na próxima sessão.
+              </p>
+            )}
+          </div>
+          <div style={{ display:"flex", gap:12 }}>
+            <button onClick={iniciarFlashcards}
+              style={{ flex:1, padding:"14px", borderRadius:12, border:"none", cursor:"pointer",
+                background:"linear-gradient(135deg, #1a5fa8, #4a9eff)", color:"#fff", fontSize:14, fontWeight:700 }}>
+              REPETIR
+            </button>
+            <button onClick={() => { setTela("menu"); setModo("flashcard"); }}
+              style={{ flex:1, padding:"14px", borderRadius:12, border:"1px solid #2e4570", cursor:"pointer",
+                background:"#111d30", color:"#4a9eff", fontSize:14, fontWeight:600 }}>
+              MENU
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // ── QUIZ ──────────────────────────────────────────────
   if (tela === "quiz" && q) {
